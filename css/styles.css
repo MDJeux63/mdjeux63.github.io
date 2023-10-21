@@ -260,8 +260,11 @@ nav ul a:hover {
 
 /* games */
 
-.list-games {
+#games{
     background-color: #111111;
+}
+
+.list-games {
     color: whitesmoke;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
