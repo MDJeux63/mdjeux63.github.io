@@ -122,7 +122,7 @@ body {
 }
 
 section {
-    padding: 20px;
+    padding: 50px;
 }
 
 nav ul {
@@ -219,8 +219,9 @@ nav ul a:hover {
 }
 
 .banner {
-    background: url(../assets/media/banner.png) no-repeat 110%;
+    background: url(../assets/media/banner.png) no-repeat;
     background-size: cover;
+    background-position: center;
     height: 91vh;
 }
 
@@ -230,7 +231,7 @@ nav ul a:hover {
 }
 
 .scroll-button a {
-    color: #f0f0f0;
+    color: whitesmoke;
     text-decoration: none;
 }
 
@@ -254,20 +255,25 @@ nav ul a:hover {
 /* about */
 
 #about {
-    padding: 20px 200px;
     text-align-last: center;
+    padding: 50px 200px;
 }
 
 /* games */
 
 #games{
     background-color: #111111;
+    padding: 20px;
 }
 
 .list-games {
     color: whitesmoke;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+}
+
+.game-item {
+    padding: 20px;
 }
 
 .game-subtitle {
@@ -279,6 +285,36 @@ nav ul a:hover {
 .game-photo {
     margin: 20px 0 0 0;
     width: 100%;
+    transition: all 0.5s;
+}
+
+.game-photo:hover {
+    transform: scale(1.05);
+    transition: all 0.5s;
+}
+
+.magazine-list {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    margin: 20px;
+    font-family: 'Eczar';
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+}
+
+.magazine-btn {
+    padding: 10px;
+    text-decoration: none;
+    background-color: whitesmoke;
+    color: #111111;
+    transition: all 1s;
+}
+
+.magazine-btn:hover {
+    background-color: #111111;
+    color: whitesmoke;
+    transition: all 1s;
 }
 
 /* order */
@@ -320,16 +356,16 @@ footer a {
     font-weight: 600;
 }
 
-/* legal.html */
+/* legal */
 
-#legal {
-    padding: 50px;
+.legal {
+    padding: 100px 200px;
 }
 
-#legal h3 {
+.legal h3 {
     margin: 50px 0 0 0;
 }
 
-#legal p {
+.legal p {
     margin: 10px 0 0 0;
 }
