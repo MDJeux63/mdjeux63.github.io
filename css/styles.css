@@ -263,17 +263,18 @@ nav ul a:hover {
 
 #games{
     background-color: #111111;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .list-games {
     color: whitesmoke;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    padding: 20px;
 }
 
 .game-item {
-    padding: 20px;
+    padding: 10px 20px 20px 20px;
 }
 
 .game-subtitle {
@@ -293,10 +294,14 @@ nav ul a:hover {
     transition: all 0.5s;
 }
 
+.dark-row {
+    background: #212121;
+}
+
 .magazine-list {
     display: grid;
     grid-template-columns: 30% 40% 30%;
-    margin: 20px;
+    margin: 40px 20px 20px 20px;
     font-family: 'Eczar';
     font-weight: 600;
     font-size: 24px;
