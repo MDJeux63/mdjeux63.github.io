@@ -2,105 +2,105 @@
 
 @font-face {
     font-family: 'Lucida Blackletter';
-    src: url('../assets/font/Lucida\ Blackletter\ Regular.ttf');
+    src: url('/assets/font/Lucida\ Blackletter\ Regular.ttf');
     font-style: normal;
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'Eczar';
-    src: url('../assets/font/Eczar-Bold.ttf');
+    src: url('/assets/font/Eczar-Bold.ttf');
     font-style: normal;
     font-weight: 700;
 }
 
 @font-face {
     font-family: 'Eczar';
-    src: url('../assets/font/Eczar-ExtraBold.ttf');
+    src: url('/assets/font/Eczar-ExtraBold.ttf');
     font-style: normal;
     font-weight: 800;
 }
 
 @font-face {
     font-family: 'Eczar';
-    src: url('../assets/font/Eczar-Medium.ttf');
+    src: url('/assets/font/Eczar-Medium.ttf');
     font-style: normal;
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'Eczar';
-    src: url('../assets/font/Eczar-Regular.ttf');
+    src: url('/assets/font/Eczar-Regular.ttf');
     font-style: normal;
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'Eczar';
-    src: url('../assets/font/Eczar-SemiBold.ttf');
+    src: url('/assets/font/Eczar-SemiBold.ttf');
     font-style: normal;
     font-weight: 600;
 }
 
 @font-face {
     font-family: 'NotoSerif';
-    src: url('../assets/font/NotoSerif-Black.ttf');
+    src: url('/assets/font/NotoSerif-Black.ttf');
     font-style: normal;
     font-weight: 900;
 }
 
 @font-face {
     font-family: 'NotoSerif';
-    src: url('../assets/font/NotoSerif-Bold.ttf');
+    src: url('/assets/font/NotoSerif-Bold.ttf');
     font-style: normal;
     font-weight: 700;
 }
 
 @font-face {
     font-family: 'NotoSerif';
-    src: url('../assets/font/NotoSerif-ExtraBold.ttf');
+    src: url('/assets/font/NotoSerif-ExtraBold.ttf');
     font-style: normal;
     font-weight: 800;
 }
 
 @font-face {
     font-family: 'NotoSerif';
-    src: url('../assets/font/NotoSerif-ExtraLight.ttf');
+    src: url('/assets/font/NotoSerif-ExtraLight.ttf');
     font-style: normal;
     font-weight: 200;
 }
 
 @font-face {
     font-family: 'NotoSerif';
-    src: url('../assets/font/NotoSerif-Light.ttf');
+    src: url('/assets/font/NotoSerif-Light.ttf');
     font-style: normal;
     font-weight: 300;
 }
 
 @font-face {
     font-family: 'NotoSerif';
-    src: url('../assets/font/NotoSerif-Medium.ttf');
+    src: url('/assets/font/NotoSerif-Medium.ttf');
     font-style: normal;
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'NotoSerif';
-    src: url('../assets/font/NotoSerif-Regular.ttf');
+    src: url('/assets/font/NotoSerif-Regular.ttf');
     font-style: normal;
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'NotoSerif';
-    src: url('../assets/font/NotoSerif-SemiBold.ttf');
+    src: url('/assets/font/NotoSerif-SemiBold.ttf');
     font-style: normal;
     font-weight: 600;
 }
 
 @font-face {
     font-family: 'NotoSerif';
-    src: url('../assets/font/NotoSerif-Thin.ttf');
+    src: url('/assets/font/NotoSerif-Thin.ttf');
     font-style: normal;
     font-weight: 100;
 }
@@ -219,7 +219,7 @@ nav ul a:hover {
 }
 
 .banner {
-    background: url(../assets/media/banner.png) no-repeat;
+    background: url(/assets/media/banner.png) no-repeat;
     background-size: cover;
     background-position: center;
     height: 91vh;
@@ -250,4 +250,38 @@ nav ul a:hover {
     font-size: 100px;
     left: 50%;
     top: 90%;
+}
+
+/* footer */
+
+footer {
+    background-color: #111111;
+    padding: 10px;
+    color: whitesmoke;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+footer a {
+    color: whitesmoke;
+}
+
+.legal-link {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* legal */
+
+.legal {
+    padding: 100px 200px;
+}
+
+.legal h3 {
+    margin: 50px 0 0 0;
+}
+
+.legal p {
+    margin: 10px 0 0 0;
 }
