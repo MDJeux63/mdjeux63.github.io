@@ -1,0 +1,122 @@
+/* about */
+
+#about {
+    text-align-last: center;
+    padding: 50px 200px;
+}
+
+/* games */
+
+#games{
+    background-color: #111111;
+    padding: 10px 0 20px 0;
+}
+
+.list-games {
+    color: whitesmoke;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px;
+}
+
+.game-item {
+    padding: 10px 20px 20px 20px;
+}
+
+.game-subtitle {
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.game-photo {
+    margin: 20px 0 0 0;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.game-photo:hover {
+    transform: scale(1.05);
+    transition: all 0.5s;
+}
+
+.dark-row {
+    background: #212121;
+}
+
+.magazine-list {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    margin: 40px 20px 20px 20px;
+    font-family: 'Eczar';
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+}
+
+.magazine-btn {
+    padding: 10px;
+    text-decoration: none;
+    background-color: whitesmoke;
+    color: #111111;
+    transition: all 1s;
+}
+
+.magazine-btn:hover {
+    background-color: #111111;
+    color: whitesmoke;
+    transition: all 1s;
+}
+
+/* order */
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+/* join */
+
+.social-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.social-btn {
+    margin: 20px 0;
+    width: 100%;
+}
+
+/* footer */
+
+footer {
+    background-color: #111111;
+    padding: 10px;
+    color: whitesmoke;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+footer a {
+    color: whitesmoke;
+}
+
+.legal-link {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* legal */
+
+.legal {
+    padding: 100px 200px;
+}
+
+.legal h3 {
+    margin: 50px 0 0 0;
+}
+
+.legal p {
+    margin: 10px 0 0 0;
+}
