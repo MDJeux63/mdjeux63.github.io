@@ -175,11 +175,11 @@ nav {
   display: none;
 }
 
-nav div:hover .nav-icon-unhover {
+.nav-icon-logo:hover .nav-icon-unhover {
   display: none;
 }
 
-nav div:hover .nav-icon-hover {
+.nav-icon-logo:hover .nav-icon-hover {
   display: block;
 }
 
@@ -240,11 +240,10 @@ nav ul a:hover {
         left: -100%;
         top: 9vh;
         width: 100%;
-        display: flex;
         justify-content: center;
         flex-direction: column;
-        text-align: center;
         align-items: center;
+        z-index: 1;
     }
 
     nav.nav-mobile ul {
@@ -367,13 +366,13 @@ footer a {
 
 /* responsive */
 
-@media (max-width: 1080px) {
+/* @media (max-width: 1080px) {
 
     .banner-group {
         display: none;
     }
 
-}
+} */
 
 @media (max-width: 480px) {
 
