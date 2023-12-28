@@ -1,6 +1,6 @@
 document.write(`
 <header>
-        <nav>
+        <nav id="nav">
             <div class="nav-icon-logo">
                 <img src="/assets/media/nav-icon.png" alt="Icône" class="nav-icon nav-icon-unhover">
                 <img src="/assets/media/nav-icon-blue.png" alt="Icône" class="nav-icon nav-icon-hover">
@@ -13,6 +13,9 @@ document.write(`
                 <li><a href="/fr-fr/home.html#order">Commander</a></li>
                 <li><a href="/fr-fr/home.html#join">Nous rejoindre</a></li>
             </ul>
+            <div id="icons"></div>
         </nav>
+
+        <script src="/js/nav.js"></script>
 </header>
 `);
