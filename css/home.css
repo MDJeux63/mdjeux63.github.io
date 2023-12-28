@@ -2,25 +2,29 @@
 
 #about {
     text-align-last: center;
-    padding: 50px 200px;
+    padding: 5vh 10vw;
+}
+
+.about-slogan {
+    font-weight: 600;
 }
 
 /* games */
 
-#games{
+#games {
     background-color: #111111;
-    padding: 10px 0 20px 0;
+    padding: 2.5vh 0 2.5vh 0;
 }
 
 .list-games {
     color: whitesmoke;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 20px;
+    padding: 1%;
 }
 
 .game-item {
-    padding: 10px 20px 20px 20px;
+    padding: 2.5% 5% 5% 5%;
 }
 
 .game-subtitle {
@@ -30,7 +34,7 @@
 }
 
 .game-photo {
-    margin: 20px 0 0 0;
+    margin-top: 2.5vh;
     width: 100%;
     transition: all 0.5s;
 }
@@ -44,35 +48,15 @@
     background: #212121;
 }
 
-.magazine-list {
-    display: grid;
-    grid-template-columns: 30% 40% 30%;
-    margin: 40px 20px 20px 20px;
-    font-family: 'Eczar';
-    font-weight: 600;
-    font-size: 24px;
-    text-align: center;
-}
-
-.magazine-btn {
-    padding: 10px;
-    text-decoration: none;
-    background-color: whitesmoke;
-    color: #111111;
-    transition: all 1s;
-}
-
-.magazine-btn:hover {
-    background-color: #111111;
-    color: whitesmoke;
-    transition: all 1s;
-}
-
 /* order */
 
 .form {
     display: flex;
     justify-content: center;
+}
+
+.btn-form {
+    display: none;
 }
 
 /* join */
@@ -83,6 +67,32 @@
 }
 
 .social-btn {
-    margin: 20px 0;
+    margin: 2.5vh 0;
     width: 100%;
+}
+
+/* responsive */
+
+@media (max-width: 960px) {
+
+    .list-games {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form {
+        display: none;
+    }
+
+    .btn-form {
+        display: inherit;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .list-games {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
 }
