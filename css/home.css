@@ -62,9 +62,19 @@
     grid-template-columns: repeat(2, 1fr);
 }
 
+.social-cards a {
+    margin: 3vh 0;
+}
+
 .social-btn {
-    margin: 2.5vh 0;
+    /* margin: 2.5vh 0; */
     width: 100%;
+    transition: all 1s;
+}
+
+.social-btn:hover {
+    transform: scale(1.05);
+    transition: all 1s;
 }
 
 /* responsive */
@@ -77,6 +87,10 @@
 
     .form {
         display: none;
+    }
+
+    #about {
+        padding-top: 12vh;
     }
 
 }
