@@ -77,6 +77,10 @@
     transition: all 1s;
 }
 
+.mail-contact {
+    padding-top: 2%;
+}
+
 /* responsive */
 
 @media (max-width: 960px) {
