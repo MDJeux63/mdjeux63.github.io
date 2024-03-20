@@ -7,103 +7,9 @@
     font-weight: 400;
 }
 
-@font-face {
-    font-family: 'Eczar';
-    src: url('/assets/font/Eczar-Bold.ttf');
-    font-style: normal;
-    font-weight: 700;
-}
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap');
 
-@font-face {
-    font-family: 'Eczar';
-    src: url('/assets/font/Eczar-ExtraBold.ttf');
-    font-style: normal;
-    font-weight: 800;
-}
-
-@font-face {
-    font-family: 'Eczar';
-    src: url('/assets/font/Eczar-Medium.ttf');
-    font-style: normal;
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: 'Eczar';
-    src: url('/assets/font/Eczar-Regular.ttf');
-    font-style: normal;
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'Eczar';
-    src: url('/assets/font/Eczar-SemiBold.ttf');
-    font-style: normal;
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: 'NotoSerif';
-    src: url('/assets/font/NotoSerif-Black.ttf');
-    font-style: normal;
-    font-weight: 900;
-}
-
-@font-face {
-    font-family: 'NotoSerif';
-    src: url('/assets/font/NotoSerif-Bold.ttf');
-    font-style: normal;
-    font-weight: 700;
-}
-
-@font-face {
-    font-family: 'NotoSerif';
-    src: url('/assets/font/NotoSerif-ExtraBold.ttf');
-    font-style: normal;
-    font-weight: 800;
-}
-
-@font-face {
-    font-family: 'NotoSerif';
-    src: url('/assets/font/NotoSerif-ExtraLight.ttf');
-    font-style: normal;
-    font-weight: 200;
-}
-
-@font-face {
-    font-family: 'NotoSerif';
-    src: url('/assets/font/NotoSerif-Light.ttf');
-    font-style: normal;
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: 'NotoSerif';
-    src: url('/assets/font/NotoSerif-Medium.ttf');
-    font-style: normal;
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: 'NotoSerif';
-    src: url('/assets/font/NotoSerif-Regular.ttf');
-    font-style: normal;
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'NotoSerif';
-    src: url('/assets/font/NotoSerif-SemiBold.ttf');
-    font-style: normal;
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: 'NotoSerif';
-    src: url('/assets/font/NotoSerif-Thin.ttf');
-    font-style: normal;
-    font-weight: 100;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* global */
 
@@ -116,7 +22,7 @@
 body {
     background-color: whitesmoke;
     color: #111111;
-    font-family: 'NotoSerif', serif;
+    font-family: 'Noto Serif', serif;
     font-size: 20px;
     text-align: justify;
 }
