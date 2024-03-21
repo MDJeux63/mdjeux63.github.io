@@ -6,11 +6,11 @@ document.write(`
         <h1 class="nav-logo">MDJeux63</h1>
     </div>
     <ul>
-        <li><a href="/fr-fr/home.html#">Accueil</a></li>
-        <li><a href="/fr-fr/home.html#about">À propos</a></li>
-        <li><a href="/fr-fr/home.html#games">Nos jeux</a></li>
-        <li><a href="/fr-fr/home.html#order">Commander</a></li>
-        <li><a href="/fr-fr/home.html#join">Nous rejoindre</a></li>
+        <li><a href="/fr-fr.html#">Accueil</a></li>
+        <li><a href="/fr-fr.html#about">À propos</a></li>
+        <li><a href="/fr-fr.html#games">Nos jeux</a></li>
+        <li><a href="/fr-fr.html#order">Commander</a></li>
+        <li><a href="/fr-fr.html#join">Nous rejoindre</a></li>
     </ul>
     <div id="icons"></div>
 </nav>
