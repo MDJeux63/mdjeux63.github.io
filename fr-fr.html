@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil | MDJeux63</title>
-    <link rel="stylesheet" href="/css/styles.css">
     <link rel="shortcut icon" href="/assets/media/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/styles.css">
     <style>
 
 /* about */
@@ -58,13 +58,6 @@
     background: #212121;
 }
 
-/* order */
-
-.form {
-    display: flex;
-    justify-content: center;
-}
-
 /* join */
 
 .social-cards {
@@ -99,20 +92,8 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .form {
-        display: none;
-    }
-
     #about {
         padding-top: 12vh;
-    }
-
-}
-
-@media (min-width: 960px) {
-
-    .btn-form {
-        display: none;
     }
 
 }
@@ -129,7 +110,7 @@
 </head>
 <body>
     <script src="/js/page-scroll.js"></script>
-    <script src="/js/header.js"></script>
+    <script src="/js/fr-fr/header.js"></script>
     <div class="banner-group">
         <div class="banner"></div>
         <p class="scroll-button banner-scroll"><a href="#about">&dtri;</a></p>
@@ -236,6 +217,7 @@
     </section>
     <section id="order">
         <h2>Des jeux vous intéressent&nbsp;? Passez votre commande sans tarder&nbsp;!</h2>
+        <a class="open-form-btn" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdnI8YvlLJUiBx0jgSPCGJzHzAh0FldUlHxEosic34KapVW2Q/viewform">Ouvrir dans une autre fenêtre</a>
         <div class="form">
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdnI8YvlLJUiBx0jgSPCGJzHzAh0FldUlHxEosic34KapVW2Q/viewform?embedded=true" width="640" height="560" frameborder="0" marginheight="0" marginwidth="0"></iframe>
         </div>
@@ -263,6 +245,6 @@
         </div>
         <h3 class="mail-contact">Pour nous contacter directement&nbsp;: <a href="mailto:autoedit.mdjeux63@gmail.com">autoedit.mdjeux63@gmail.com</a></h3>
     </section>
-    <script src="/js/footer.js"></script>
+    <script src="/js/fr-fr/footer.js"></script>
 </body>
 </html>

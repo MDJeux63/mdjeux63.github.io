@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDStock | MDJeux63</title>
+    <link rel="shortcut icon" href="/assets/media/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+
+        .banner-stock {
+            background: url(/assets/media/banner-mdstock.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            height: 50vh;
+        }
+
+        .pricing-text {
+            font-family: 'Eczar';
+            font-weight: 500;
+            font-size: 48px;
+            text-align: center;
+        }
+
+        #stock-grid {
+            background: #111111;
+            padding: 2.5vh 2vw 2.5vh 2vw;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            color: whitesmoke;
+            text-align: center;
+        }
+
+        #stock-grid img {
+            width: 100%;
+            transition: 1s ease;
+        }
+
+        #stock-grid img:hover {
+            transform: scale(1.1);
+            transition: 1s ease;
+        }
+
+        .stock-item {
+            margin: 2% 2% 12% 2%;
+        }
+
+        /* responsive */
+
+        @media (max-width: 1140px) {
+
+            #stock-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+        }
+
+        @media (max-width: 880px) {
+
+            #stock-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+
+        @media (max-width: 560px) {
+
+            #stock-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 360px) {
+
+            #stock-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 1080px) {
+
+            .banner-stock {
+                display: none;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <script src="/js/page-scroll.js"></script>
+    <script src="/js/fr-fr/header.js"></script>
+
+    <div class="banner-stock"></div>
+
+    <section class="article">
+
+        <h2>Bienvenue sur MDStock&nbsp;!</h2>
+
+        <p>Mais qu'est-ce que c'est que ça&nbsp;?</p>
+
+        <p>L'année 2022 a vu naitre une invention fantastique et qui va révolutionner le monde dans les prochaines années, et ce dès aujourd'hui… l'<span class="text-700">Intelligence Artificielle</span>, bien sûr&nbsp;!</p>
+
+        <p>Nous avons confectionné pour vous des images à l'aide d'un outil créé par une entreprise internationalement connue, intitulé <a href="https://bing.com/create" target="_blank">Microsoft Copilot Designer</a>, qui permet de générer des images uniques et originales à partir de simples descriptions textuelles. Nous les vendons à un prix symbolique de&nbsp;:</p>
+
+        <p class="pricing-text">1&nbsp;€ / image</p>
+
+        <h3>Licence & informations légales</h3>
+
+        <p>Une fois que vous avez acheté nos images, souvenez-vous qu'elles sont protégées par la licence <span class="text-700">Attribution 4.0 International (CC BY 4.0)</span>. Pour faire simple, cela signifie que&nbsp;:</p>
+
+        <ul>
+            <li>Vous avez le droit de partager nos images avec d'autres personnes, de les adapter/modifier/remixer, tout cela même à des fins commerciales.</li>
+            <li>Vous devez absolument citer notre nom&nbsp;; et aussi, le cas échéant, indiquer si l'image a été modifiée. Nous avons pour vous une notice <a href="/assets/media/mdstock-attribution.md" target="_blank">ici</a>.</li>
+        </ul>
+
+        <p>Nous vous recommandons de lire la page de la licence sur le site officiel de Creative Commons par ici&nbsp;: <a href="https://creativecommons.org/licenses/by/4.0" target="_blank">creativecommons.org/licenses/by/4.0</a>&nbsp;; et de prendre connaissance des règles inscrites là-bas.</p>
+
+        <p>Les images d'exemple insérées <a href="#stock-grid">plus bas sur cette page</a> ne doivent être utilisées que pour tester de votre côté, mais devront être payées avant d'être partagées au grand public (sur Internet ou support papier).</p>
+
+        <p>Nous ne sommes ni affiliés ni sponsorisés par Microsoft. C'est juste un petit passetemps, un parallèle aux jeux habituellement vendus chez MDJeux63, parce que ça nous fait plaisir.</p>
+
+        <h3>Commande & paiement</h3>
+
+        <p>Commencez par compléter le formulaire de commande disponible <a href="#order">ici</a>, en indiquant la référence de chaque image que vous voulez acheter.</p>
+
+        <p>Malheureusement, nous ne proposons pour l'instant que le paiement sécurisé via PayPal et le paiement par chèque. Réalisez le paiement à l'adresse <a href="http://paypal.me/mdjeux63" target="_blank">paypal.me/mdjeux63</a>&nbsp;: pas d'inquiétude, le paiement sera totalement sécurisé&nbsp;! Sinon, nous vous enverrons un e-mail contenant l'ordre du chèque, et l'adresse de destination.</p>
+
+        <p>Une fois l'argent envoyé, nous vous enverrons un e-mail (à l'adresse utilisée lors du paiement en ligne) contenant toutes les informations pratiques pour télécharger et utiliser nos images.</p>
+
+        <h3>Détails techniques</h3>
+
+        <p>Les images sont toutes au format <span class="text-700">*.PNG (Portable Network Graphics)</span>, mesurent <span class="text-700">1024&nbsp;&times;&nbsp;1024&nbsp;pixels</span> et ont une <span class="text-700">profondeur de couleur de 32</span>. Aucune retouche n'est appliquée, les images finales sont telles qu'elles ont été proposées par l'I.A.&nbsp;!</p>
+
+        <p>Si vous avez des questions ou si vous rencontrez des difficultés, contactez-nous en cliquant <a href="/fr-fr.html#join" target="_blank">ici</a>.</p>
+
+        <p>Nous vous rappelons qu'il s'agit d'une banque d'images où tout le monde peut acheter les créations de l'I.A. donc gardez à l'esprit qu'elles peuvent être utilisées par d'autres…</p>
+
+        <p>Finalement, notre collection s'étoffe de jour en jour… alors restez à l'affût&nbsp;!</p>
+
+        <p>Bonne visite, les artistes !</p>
+
+    </section>
+
+    <section id="stock-grid">
+
+        <div class="stock-item"><img src="https://i.postimg.cc/QCGdDmjQ/000000000001.png" alt="Image">000000000001</div>
+        <div class="stock-item"><img src="https://i.postimg.cc/dVHQ3wqt/000000000002.png" alt="Image">000000000002</div>
+        <div class="stock-item"><img src="https://i.postimg.cc/QC3hwMqS/000000000003.png" alt="Image">000000000003</div>
+        <div class="stock-item"><img src="https://i.postimg.cc/NFBvbzgz/000000000004.png" alt="Image">000000000004</div>
+        <div class="stock-item"><img src="https://i.postimg.cc/kgzrL4J8/000000000005.png" alt="Image">000000000005</div>
+        <div class="stock-item"><img src="https://i.postimg.cc/ZqNkmSnQ/000000000006.png" alt="Image">000000000006</div>
+        <div class="stock-item"><img src="https://i.postimg.cc/nzxWt96s/000000000007.png" alt="Image">000000000007</div>
+        <div class="stock-item"><img src="https://i.postimg.cc/LXVb46px/000000000008.png" alt="Image">000000000008</div>
+        <div class="stock-item"><img src="https://i.postimg.cc/tCcm4MKG/000000000009.png" alt="Image">000000000009</div>
+        <div class="stock-item"><img src="https://i.postimg.cc/9QqgRB2R/000000000010.png" alt="Image">000000000010</div>
+        <div class="stock-item"><img src="https://i.postimg.cc/V64KQGqT/000000000011.png" alt="Image">000000000011</div>
+        <div class="stock-item"><img src="https://i.postimg.cc/658Yghyj/000000000012.png" alt="Image">000000000012</div>
+        <div class="stock-item"><img src="https://i.postimg.cc/Ls3TLCbX/000000000013.png" alt="Image">000000000013</div>
+        <div class="stock-item"><img src="https://i.postimg.cc/brWHpKs6/000000000014.png" alt="Image">000000000014</div>
+        <div class="stock-item"><img src="https://i.postimg.cc/sgp9CHyc/000000000015.png" alt="Image">000000000015</div>
+        <div class="stock-item"><img src="https://i.postimg.cc/W4TmNm1P/000000000016.png" alt="Image">000000000016</div>
+        <div class="stock-item"><img src="https://i.postimg.cc/d108dqCH/000000000017.png" alt="Image">000000000017</div>
+        <div class="stock-item"><img src="https://i.postimg.cc/yYR00pJH/000000000018.png" alt="Image">000000000018</div>
+        <div class="stock-item"><img src="https://i.postimg.cc/yN194VL1/000000000019.png" alt="Image">000000000019</div>
+        <div class="stock-item"><img src="https://i.postimg.cc/B6tKbmWR/000000000020.png" alt="Image">000000000020</div>
+        <div class="stock-item"><img src="https://i.postimg.cc/6qv4LTp0/000000000021.png" alt="Image">000000000021</div>
+        <div class="stock-item"><img src="https://i.postimg.cc/gk3gqHjf/000000000022.png" alt="Image">000000000022</div>
+        <div class="stock-item"><img src="https://i.postimg.cc/mrgV4xjs/000000000023.png" alt="Image">000000000023</div>
+        <div class="stock-item"><img src="https://i.postimg.cc/G3yKdxFH/000000000024.png" alt="Image">000000000024</div>
+
+    </section>
+
+    <section id="order">
+
+        <h2>Vous avez fait votre choix&nbsp;? Passez votre commande maintenant&nbsp;!</h2>
+        <a class="open-form-btn" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSea1F6NZfPeua0LILNaCkZ1-L6TAzGWdoiZjeBidxsKcRZrFA/viewform">Ouvrir dans une autre fenêtre</a>
+        <div class="form">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSea1F6NZfPeua0LILNaCkZ1-L6TAzGWdoiZjeBidxsKcRZrFA/viewform?embedded=true" width="640" height="560" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+        </div>
+        <div class="btn-grid btn-form">
+            <div></div>
+            <a class="btn-item" href="https://docs.google.com/forms/d/e/1FAIpQLSea1F6NZfPeua0LILNaCkZ1-L6TAzGWdoiZjeBidxsKcRZrFA/viewform" target="_blank">Accéder au formulaire de commande</a>
+            <div></div>
+        </div>
+
+    </section>
+
+    <script src="/js/fr-fr/footer.js"></script>
+</body>
+</html>
