@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil | MDJeux63</title>
+    <link rel="shortcut icon" href="/assets/media/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+
+        /* global */
+
+        a {
+            text-decoration: none;
+        }
+
+        /* header */
+
+        #header {
+            padding: 0;
+            margin: 0;
+            font-size: 100px;
+        }
+
+        .tri {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            line-height: 0.5;
+        }
+
+        .banner {
+            background: url(/assets/media/banner.png) no-repeat cover;
+            height: 80vh;
+        }
+
+        /* about */
+
+        #about {
+            padding: 5% 20%;
+        }
+
+        #about p {
+            text-align: justify;
+        }
+
+        .about-slogan {
+            display: flex;
+            justify-content: center;
+            padding: 2%;
+            font-weight: 700;
+        }
+
+        /* games */
+
+        #games {
+            padding: 2% 20%;
+            background: var(--color-1);
+            color: var(--color-3);
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .game-slogan {
+            text-align: center;
+            padding-bottom: 5%;
+        }
+
+        .game-item {
+            margin: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .game-item img {
+            width: 100%;
+            transition: 1s;
+        }
+
+        .game-item img:hover {
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+        .ba-game {
+            text-align: center;
+            margin-top: 5%;
+            background: var(--color-3);
+        }
+
+        /* form */
+
+        #forms {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        /* join */
+
+        .join-cards {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .join-cards div a img {
+            width: 30vw;
+            transition: 1s;
+        }
+
+        .join-cards div a img:hover {
+            transform: scale(1.05);
+            transition: 1s;
+        }
+
+        /* responsive */
+
+        @media (max-width: 960px) {
+
+            #games {
+                padding: 5%;
+            }
+
+        }
+
+        @media (max-width: 660px) {
+
+            #games {
+                grid-template-columns: repeat(1, 1fr);
+                margin-bottom: 50%;
+            }
+
+            .game-item img {
+                width: 50vw;
+            }
+
+        }
+
+        /* links */
+
+        .gotomain-link {
+            background: var(--color-1);
+            text-align: center;
+            margin: 1%;
+            padding: 0.5%;
+            font-size: 12px;
+        }
+
+        .gotomain-link a {
+            color: #e1e1e1;
+            transition: 1s;
+        }
+
+        .gotomain-link a:hover {
+            font-size: 20px;
+            transition: 1s;
+        }
+
+        .gotomainpage {
+            display: flex;
+            justify-content: center;
+            padding: 0.5%;
+            margin: 3%;
+            font-family: 'Eczar';
+            font-weight: 700;
+            font-size: 24px;
+            background: var(--color-1);
+            color: var(--color-3);
+            transition: 1s;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .gotomainpage:hover {
+            background: #e1e1e1;
+            color: var(--color-2);
+            transition: 1s;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="gotomain-link"><a href="/fr-fr.html"><p>Cliquez ici pour accéder directement à la page d'accueil complète…</p></a></div>
+
+    <section id="header">
+        <div class="banner"></div>
+        <a href="#about"><p class="tri">&dtri;&dtri;&dtri;</p></a>
+    </section>
+
+    <section id="about">
+        <h2>Chers joueurs de cartes et minijeux, bienvenue&nbsp;!</h2>
+        <p>Depuis septembre 2023, nous proposons des jeux entièrement faits maison, créés par nos soins, imprimés sur du papier de qualité, découpés à la main et souvent accompagnés de dés et figurines, le tout vendu à des prix intéressants.</p>
+        <p class="about-slogan">Voilà pourquoi nous vous invitons à les découvrir dès maintenant&nbsp;!</p>
+    </section>
+
+    <section id="games">
+
+        <h2>Nos deux jeux en vedette :</h2>
+
+        <div class="games-grid">
+
+            <div class="game-item game-mp">
+                <div>
+                    <h3>Magic Potions</h3>
+                    <p class="game-slogan">Combats à coups de dés et de potions</p>
+                    <p class="game-slogan">2 à 4 joueurs – Dès 8 ans</p>
+                </div>
+                <img src="/assets/media/games/game-magic-potions.png" alt="Photo Magic Potions">
+                <a href="https://youtu.be/mMAPET3suIQ" target="_blank" class="ba-game">Cliquez ici pour voir la bande-annonce</a>
+            </div>
+            <div class="game-item game-lu">
+                <div>
+                    <h3>Level Up</h3>
+                    <p class="game-slogan">Qui sera le premier héros à monter de niveau&nbsp;?</p>
+                    <p class="game-slogan">2 à 6 joueurs – Dès 6 ans</p>
+                </div>
+                <img src="/assets/media/games/game-level-up.png" alt="Photo Level Up">
+                <a href="https://youtu.be/ZFaCs0k9oVE" target="_blank" class="ba-game">Cliquez ici pour voir la bande-annonce</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="form">
+        <h2>Passer votre commande…</h2>
+        <div id="forms">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdnI8YvlLJUiBx0jgSPCGJzHzAh0FldUlHxEosic34KapVW2Q/viewform?embedded=true" width="640" height="560" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+            <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdnI8YvlLJUiBx0jgSPCGJzHzAh0FldUlHxEosic34KapVW2Q/viewform"><p>Cliquez ici pour afficher le formulaire en plein écran</p></a>
+        </div>
+    </section>
+
+    <section id="join">
+        <h2>Nos réseaux sociaux…</h2>
+        <div class="join-cards">
+            <div>
+                <a target="_blank" href="http://youtube.com/@mdjeux63"><img src="/assets/media/social/social-yt.svg" alt="Notre chaîne YouTube"></a>
+                <a target="_blank" href="http://facebook.com/mdjeux63.games"><img src="/assets/media/social/social-fb.svg" alt="Notre page Facebook"></a>
+            </div>
+            <div>
+                <a target="_blank" href="http://instagram.com/mdjeux63"><img src="/assets/media/social/social-insta.svg" alt="Notre compte Instagram"></a>
+            </div>
+        </div>
+    </section>
+
+    <a href="/fr-fr.html"><p class="gotomainpage">Cliquez ici pour accéder au site complet, à tout le catalogue et à tous nos jeux</p></a>
+
+</body>
+</html>
