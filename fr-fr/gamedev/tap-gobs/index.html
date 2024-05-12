@@ -21,9 +21,16 @@
 
     <!-- All margins and padding must be zero for the canvas to fill the screen. -->
 	<style type="text/css">
+		@font-face {
+			font-family: 'Lucida Blackletter';
+			src: url('/assets/font/Lucida\ Blackletter\ Regular.ttf');
+			font-style: normal;
+			font-weight: 400;
+		}
 		* {
 			padding: 0;
 			margin: 0;
+			font-family: 'Lucida Blackletter', cursive;
 		}
 		html, body {
 			background: #000;
@@ -33,7 +40,6 @@
 			-ms-touch-action: none;
 		}
 		canvas {
-			touch-action-delay: none;
 			touch-action: none;
 			-ms-touch-action: none;
 		}
