@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1715415182,
+	"version": 1715517353,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -12,6 +12,8 @@
 		"images/spawn-sheet0.png",
 		"images/trigger-sheet0.png",
 		"images/particles.png",
+		"images/logomd-sheet0.png",
+		"images/playbtn-sheet0.png",
 		"media/slash.m4a",
 		"media/slash.ogg",
 		"media/music.m4a",
