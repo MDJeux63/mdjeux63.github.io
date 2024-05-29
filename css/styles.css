@@ -78,7 +78,7 @@ nav {
     align-items: center;
 }
 
-.nav-logo {
+.nav-logo a {
     font-family: 'Lucida Blackletter';
     font-weight: 400;
     font-size: 36px;
