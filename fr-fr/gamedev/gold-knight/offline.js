@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1715161515,
+	"version": 1717229487,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -13,6 +13,8 @@
 		"images/sprite5-sheet0.png",
 		"images/trigger-sheet0.png",
 		"images/particles.png",
+		"images/lefttrigger-sheet0.png",
+		"images/righttrigger-sheet0.png",
 		"media/collectpoints.m4a",
 		"media/collectpoints.ogg",
 		"media/gameover.m4a",
