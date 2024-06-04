@@ -1,0 +1,32 @@
+﻿{
+	"version": 1717516571,
+	"fileList": [
+		"data.js",
+		"c2runtime.js",
+		"jquery-3.4.1.min.js",
+		"offlineClient.js",
+		"images/foret-sheet0.png",
+		"images/herbe-sheet0.png",
+		"images/fille-sheet0.png",
+		"images/pap1-sheet0.png",
+		"images/pap2-sheet0.png",
+		"images/spwan-sheet0.png",
+		"images/trigger-sheet0.png",
+		"images/particles.png",
+		"images/gauche-sheet0.png",
+		"images/droite-sheet0.png",
+		"images/saut1-sheet0.png",
+		"media/cutie-laugh-83616.m4a",
+		"media/cutie-laugh-83616.ogg",
+		"media/wow-171498.m4a",
+		"media/wow-171498.ogg",
+		"media/candy-land-dreamsiamich.m4a",
+		"media/candy-land-dreamsiamich.ogg",
+		"icon-16.png",
+		"icon-32.png",
+		"icon-114.png",
+		"icon-128.png",
+		"icon-256.png",
+		"loading-logo.png"
+	]
+}
