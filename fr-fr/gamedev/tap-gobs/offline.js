@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1717603828,
+	"version": 1717770017,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -16,6 +16,8 @@
 		"images/playbtn-sheet0.png",
 		"media/slash.m4a",
 		"media/slash.ogg",
+		"media/congratulations-deep-voice-172193.m4a",
+		"media/congratulations-deep-voice-172193.ogg",
 		"media/music.m4a",
 		"media/music.ogg",
 		"icon-16.png",
