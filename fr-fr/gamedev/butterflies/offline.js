@@ -1,11 +1,10 @@
 ﻿{
-	"version": 1717921726,
+	"version": 1717948553,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
 		"jquery-3.4.1.min.js",
 		"offlineClient.js",
-		"images/foret-sheet0.png",
 		"images/herbe-sheet0.png",
 		"images/fille-sheet0.png",
 		"images/pap1-sheet0.png",
@@ -16,6 +15,7 @@
 		"images/gauche-sheet0.png",
 		"images/droite-sheet0.png",
 		"images/saut1-sheet0.png",
+		"images/sprite-sheet0.png",
 		"media/cutie-laugh-83616.m4a",
 		"media/cutie-laugh-83616.ogg",
 		"media/wow-171498.m4a",
