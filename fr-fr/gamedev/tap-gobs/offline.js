@@ -1,0 +1,33 @@
+﻿{
+	"version": 1717921198,
+	"fileList": [
+		"data.js",
+		"c2runtime.js",
+		"jquery-3.4.1.min.js",
+		"offlineClient.js",
+		"images/sword-sheet0.png",
+		"images/background-sheet0.png",
+		"images/mob1-sheet0.png",
+		"images/mob2-sheet0.png",
+		"images/spawn-sheet0.png",
+		"images/trigger-sheet0.png",
+		"images/particles.png",
+		"images/logomd-sheet0.png",
+		"images/playbtn-sheet0.png",
+		"images/sprite-sheet0.png",
+		"images/infobutton-sheet0.png",
+		"images/rules-sheet0.png",
+		"media/slash.m4a",
+		"media/slash.ogg",
+		"media/congratulations-deep-voice-172193.m4a",
+		"media/congratulations-deep-voice-172193.ogg",
+		"media/music.m4a",
+		"media/music.ogg",
+		"icon-16.png",
+		"icon-32.png",
+		"icon-114.png",
+		"icon-128.png",
+		"icon-256.png",
+		"loading-logo.png"
+	]
+}

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil | MDJeux63</title>
+    <link rel="shortcut icon" href="/assets/media/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        /* about */
+
+        #about {
+            text-align-last: center;
+            padding: 5vh 10vw;
+        }
+
+        .about-slogan {
+            font-weight: 600;
+        }
+
+        /* games */
+
+        #games {
+            background-color: var(--color-1);
+            padding: 2.5vh 0 2.5vh 0;
+        }
+
+        .list-games {
+            color: var(--color-3);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 1%;
+        }
+
+        .game-item {
+            padding: 2.5% 5% 5% 5%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .game-subtitle {
+            padding: 0 0.8vw;
+            text-align: center;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .game-photo {
+            margin-top: 2.5vh;
+            width: 100%;
+            transition: all 0.5s;
+        }
+
+        .game-photo:hover {
+            transform: scale(1.05);
+            transition: all 0.5s;
+        }
+
+        /* videos */
+
+        #videos {
+            background: var(--color-1);
+            color: var(--color-3);
+        }
+
+        .videos-grid {
+            display: grid;
+            gap: 3%;
+            grid-template-columns: repeat(3, 1fr);
+            margin: 1%;
+            overflow-y: scroll;
+        }
+
+        .videos-grid iframe {
+            width: 100%;
+            height: 30vh;
+        }
+
+        /* join */
+
+        .social-cards div {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .social-btn {
+            width: 100%;
+            transition: all 1s;
+            width: 45vw;
+            margin: 3vh 0;
+        }
+
+        .social-btn:hover {
+            transform: scale(1.05);
+            transition: all 1s;
+        }
+
+        .mail-contact {
+            padding-top: 2%;
+        }
+
+        /* responsive */
+
+        @media (max-width: 960px) {
+
+            #about {
+                padding-top: 12vh;
+            }
+
+            .list-games {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .videos-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 480px) {
+
+            .list-games {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .videos-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <script src="/js/page-scroll.js"></script>
+    <script src="/js/fr-fr/header.js"></script>
+    <div class="banner-group">
+        <div class="banner"></div>
+        <p class="scroll-button banner-scroll"><a href="#about">&dtri;</a></p>
+    </div>
+    <section id="about">
+        <h2>Chers joueurs de cartes et minijeux, bienvenue&nbsp;!</h2>
+        <p>Depuis septembre 2023, nous proposons des jeux entièrement faits maison, créés par nos soins, imprimés sur du papier de qualité, découpés à la main et souvent accompagnés de dés et figurines, le tout vendu à des prix intéressants.</p>
+        <p class="about-slogan">Voilà pourquoi nous vous invitons à les découvrir dès maintenant&nbsp;!</p>
+    </section>
+    <section id="games">
+        <div class="list-games">
+            <div class="game-item" id="magic-potions">
+                <div>
+                    <h3 class="game-name">Magic Potions</h3>
+                    <p class="game-subtitle">Combats à coups de dés et de potions</p>
+                </div>
+                <a href="https://youtu.be/mMAPET3suIQ" target="_blank"><img src="/assets/media/games/game-magic-potions.png" alt="Aperçu du jeu" class="game-photo"></a>
+            </div>
+            <div class="game-item" id="memo-fantasy">
+                <div>
+                    <h3 class="game-name">Memo Fantasy</h3>
+                    <p class="game-subtitle">Un jeu pour entrainer sa mémoire ou tout simplement pour s'amuser</p>
+                </div>
+                <a href="https://youtu.be/6tqI9lHHH5M" target="_blank"><img src="/assets/media/games/game-memo-fantasy.png" alt="Aperçu du jeu" class="game-photo"></a>
+            </div>
+            <div class="game-item" id="memo-fantasy-les-fees">
+                <div>
+                    <h3 class="game-name">Memo Fantasy&#8239;: Les fées</h3>
+                    <p class="game-subtitle">Deuxième jeu de la série, cette fois-ci avec des fées</p>
+                </div>
+                <a href="https://youtu.be/uxyU8bO-TYk" target="_blank"><img src="/assets/media/games/game-memo-fantasy-les-fees.png" alt="Aperçu du jeu" class="game-photo"></a>
+            </div>
+            <div class="game-item" id="battle-mages">
+                <div>
+                    <h3 class="game-name">Battle Mages</h3>
+                    <p class="game-subtitle">Le nouveau jeu de cartes à collectionner</p>
+                </div>
+                <a href="https://youtu.be/kUC52SIwzF4" target="_blank"><img src="/assets/media/games/game-battle-mages.png" alt="Aperçu du jeu" class="game-photo"></a>
+            </div>
+        </div>
+        <div class="list-games dark-row">
+            <div class="game-item" id="level-up">
+                <div>
+                    <h3 class="game-name">Level Up</h3>
+                    <p class="game-subtitle">Qui sera le premier héros à monter de niveau&nbsp;?</p>
+                </div>
+                <a href="https://youtu.be/ZFaCs0k9oVE" target="_blank"><img src="/assets/media/games/game-level-up.png" alt="Aperçu du jeu" class="game-photo"></a>
+            </div>
+            <div class="game-item" id="donjons-duel">
+                <div>
+                    <h3 class="game-name">Donjons Duel</h3>
+                    <p class="game-subtitle">Passez la porte sans oublier la clé</p>
+                </div>
+                <a href="https://youtu.be/QFf2ItMyzHg" target="_blank"><img src="/assets/media/games/game-donjons-duel.png" alt="Aperçu du jeu" class="game-photo"></a>
+            </div>
+            <div class="game-item" id="df-chasse-aux-gobelins">
+                <div>
+                    <h3 class="game-name">DF&#8239;: Chasse aux gobelins</h3>
+                    <p class="game-subtitle">Terrassez les gobelins pour amasser le plus d’or</p>
+                </div>
+                <a href="https://youtu.be/zC40wiAnI8I" target="_blank"><img src="/assets/media/games/game-df-chasse-aux-gobelins.png" alt="Aperçu du jeu" class="game-photo"></a>
+            </div>
+            <div class="game-item" id="df-chasse-aux-orcs">
+                <div>
+                    <h3 class="game-name">DF&#8239;: Chasse aux orcs</h3>
+                    <p class="game-subtitle">Terrassez les orcs pour amasser le plus d’or</p>
+                </div>
+                <a href="https://youtu.be/oP_21k9IkO8" target="_blank"><img src="/assets/media/games/game-df-chasse-aux-orcs.png" alt="Aperçu du jeu" class="game-photo"></a>
+            </div>
+        </div>
+        <div class="list-games">
+            <div class="game-item" id="medieval-forge">
+                <div>
+                    <h3 class="game-name">Medieval Forge</h3>
+                    <p class="game-subtitle">Serez-vous le maitre forgeron&nbsp;?</p>
+                </div>
+                <a href="https://youtu.be/Kr5C90TWPV0" target="_blank"><img src="/assets/media/games/game-medieval-forge.png" alt="Aperçu du jeu" class="game-photo"></a>
+            </div>
+            <div class="game-item" id="tiny-dungeon">
+                <div>
+                    <h3 class="game-name">Tiny Dungeon</h3>
+                    <p class="game-subtitle">Seul le dé peut vous guider</p>
+                </div>
+                <a href="https://youtu.be/YOPY1pzIwPU" target="_blank"><img src="/assets/media/games/game-tiny-dungeon.png" alt="Aperçu du jeu" class="game-photo"></a>
+            </div>
+            <div class="game-item" id="epic-duel-fantasy">
+                <div>
+                    <h3 class="game-name">Epic Duel Fantasy</h3>
+                    <p class="game-subtitle">Hache, arc, bouclier&nbsp;: à vous de choisir</p>
+                </div>
+                <a href="https://youtu.be/Yb5HSlaDEBU" target="_blank"><img src="/assets/media/games/game-epic-duel-fantasy.png" alt="Aperçu du jeu" class="game-photo"></a>
+            </div>
+            <div class="game-item" id="battle-tavern">
+                <div>
+                    <h3 class="game-name">Battle Tavern</h3>
+                    <p class="game-subtitle">Au cœur des batailles enflammées de la taverne</p>
+                </div>
+                <a href="https://youtu.be/i-i7alC77ds" target="_blank"><img src="/assets/media/games/game-battle-tavern.png" alt="Aperçu du jeu" class="game-photo"></a>
+            </div>
+        </div>
+        <div class="list-games dark-row">
+            <div class="game-item" id="dice-wars">
+                <div>
+                    <h3 class="game-name">Dice Wars</h3>
+                    <p class="game-subtitle">DISPONIBLE EN SEPTEMBRE 2024</p>
+                </div>
+                <a href="http://youtube.com/@MDJeux63" target="_blank"><img src="/assets/media/games/game-dice-wars.png" alt="Aperçu du jeu" class="game-photo"></a>
+            </div>
+            <div class="game-item" id="dice-wars">
+                <div>
+                    <h3 class="game-name">Horde & Héros</h3>
+                    <p class="game-subtitle">DISPONIBLE EN SEPTEMBRE 2024</p>
+                </div>
+                <a href="http://youtube.com/@MDJeux63" target="_blank"><img src="/assets/media/games/game-horde-et-heros.png" alt="Aperçu du jeu" class="game-photo"></a>
+            </div>
+            <div class="game-item" id="dice-wars">
+                <div>
+                    <h3 class="game-name">Runes</h3>
+                    <p class="game-subtitle">DISPONIBLE EN SEPTEMBRE 2024</p>
+                </div>
+                <a href="http://youtube.com/@MDJeux63" target="_blank"><img src="/assets/media/games/game-runes.png" alt="Aperçu du jeu" class="game-photo"></a>
+            </div>
+            <div class="game-item" id="dice-wars">
+                <div>
+                    <h3 class="game-name">Battle Magic</h3>
+                    <p class="game-subtitle">DISPONIBLE EN SEPTEMBRE 2024</p>
+                </div>
+                <a href="http://youtube.com/@MDJeux63" target="_blank"><img src="/assets/media/games/game-battle-magic.png" alt="Aperçu du jeu" class="game-photo"></a>
+            </div>
+        </div>
+        <div class="btn-grid">
+            <div></div>
+            <a class="btn-item btn-item-light" href="https://drive.google.com/uc?id=1fJ_BgyOskhjyi0kpbUM4Cbam3WxjPiqR&export=download" target="_blank">Consultez la liste complète des jeux disponibles</a>
+            <div></div>
+        </div>
+    </section>
+    <section id="order">
+        <h2>Des jeux vous intéressent&nbsp;? Passez votre commande sans tarder&nbsp;!</h2>
+        <a class="open-form-btn" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdnI8YvlLJUiBx0jgSPCGJzHzAh0FldUlHxEosic34KapVW2Q/viewform">Ouvrir dans une autre fenêtre</a>
+        <div class="form">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdnI8YvlLJUiBx0jgSPCGJzHzAh0FldUlHxEosic34KapVW2Q/viewform?embedded=true" width="640" height="560" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+        </div>
+        <div class="btn-grid btn-form">
+            <div></div>
+            <a class="btn-item" href="https://docs.google.com/forms/d/e/1FAIpQLSdnI8YvlLJUiBx0jgSPCGJzHzAh0FldUlHxEosic34KapVW2Q/viewform" target="_blank">Accéder au formulaire de commande</a>
+            <div></div>
+        </div>
+    </section>
+    <section id="videos">
+        <h2>Regardez nos meilleures vidéos…</h2>
+        <div class="videos-grid">
+            <iframe src="https://www.youtube.com/embed/5l2BOSwWosI" title="Vidéo YouTube" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/QG_-OkAn0U4" title="Vidéo YouTube" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/iEX5fmD2mOE" title="Vidéo YouTube" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+    <section id="join">
+        <h2>Rejoignez-nous sur les réseaux sociaux&nbsp;!</h2>
+        <div class="social-cards">
+            <div>
+                <a href="http://youtube.com/@MDJeux63" target="_blank">
+                    <img src="/assets/media/social/social-yt.svg" alt="Notre chaîne YouTube" class="social-btn">
+                </a>
+                <a href="http://facebook.com/MDJeux63.Games" target="_blank">
+                    <img src="/assets/media/social/social-fb.svg" alt="Notre page Facebook" class="social-btn">
+                </a>
+            </div>
+            <div>
+                <a href="http://instagram.com/MDJeux63" target="_blank">
+                    <img src="/assets/media/social/social-insta.svg" alt="Notre page Instagram" class="social-btn">
+                </a>
+                <!-- <a href="http://tiktok.com/@MDJeux63" target="_blank">
+                    <img src="/assets/media/social/social-tiktok.svg" alt="Notre compte TikTok" class="social-btn">
+                </a> -->
+            </div>
+        </div>
+        <h3 class="mail-contact">Pour nous contacter directement&#8239;: <a href="mailto:autoedit.mdjeux63@gmail.com">autoedit.mdjeux63@gmail.com</a></h3>
+    </section>
+    <script src="/js/fr-fr/footer.js"></script>
+</body>
+</html>
