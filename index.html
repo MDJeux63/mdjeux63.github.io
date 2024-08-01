@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDJeux63</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+
+        /* ------------------------------ header ------------------------------ */
+
+        .header-banner {
+            height: 60vh;
+            background: url(/assets/images/banners/header-banner.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: 50%;
+        }
+
+        /* ------------------------------ a-propos ------------------------------ */
+
+        #a-propos p {
+            margin: 1% 5% 0 5%;
+            font-size: 20px;
+            text-align: justify;
+            text-align-last: center;
+        }
+
+        /* ------------------------------ jeux-de-societe ------------------------------ */
+
+        #jeux-de-societe {
+            background: url(/assets/images/backgrounds/leather-bg-75.png);
+            color: var(--color-9);
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+        }
+
+        .games-grid-item {
+            margin: 0 5% 15% 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .game-name {
+            font-family: var(--font-2);
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .game-slogan {
+            margin-bottom: 5%;
+            font-weight: 500;
+        }
+        
+        .game-photo img {
+            width: 100%;
+            transition: 1s;
+        }
+        
+        .game-photo img:hover {
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+        /* ------------------------------ commander ------------------------------ */
+
+        .form {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* ------------------------------ gamedev ------------------------------ */
+
+        #gamedev {
+            background: url(/assets/images/backgrounds/leather-bg-75.png);
+            color: var(--color-9);
+        }
+
+        /* ------------------------------ nos-videos ------------------------------ */
+
+        #nos-videos {
+            background: url(/assets/images/backgrounds/leather-bg-75.png);
+            color: var(--color-9);
+        }
+
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2%;
+        }
+
+        .videos-grid iframe {
+            width: 100%;
+            height: 25vh;
+        }
+
+        /* ------------------------------ nous-rejoindre ------------------------------ */
+
+        .social-grid {
+            margin-top: 2%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .social-grid a img {
+            width: 100%;
+            transition: 1s;
+        }
+
+        .social-grid a img:hover {
+            transform: scale(1.3);
+            transition: 1s;
+        }
+
+        .social-logo-disabled {
+            filter: grayscale(100%);
+            opacity: .5;
+        }
+
+        /* ------------------------------ myths-and-legends ------------------------------ */
+
+        #myths-and-legends {
+            display: grid;
+            grid-template-columns: repeat(2, 40% 60%);
+            background: linear-gradient(25deg, var(--color-1) 0%, #00203c 100%);
+            color: var(--color-9);
+            font-family: var(--font-4);
+        }
+
+        .myths-and-legends-infos {
+            margin-right: 20%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .myths-and-legends-logo {
+            width: 100%;
+        }
+
+        .myths-and-legends-link {
+            margin-top: 15%;
+            padding: 3%;
+            background: #D0DAFF;
+            color: var(--color-1);
+            box-shadow: 5px 5px 1px 0px rgba(245, 245, 245, 0.5);
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: inherit;
+            transition: 1s;
+        }
+
+        .myths-and-legends-link:hover {
+            background: var(--color-1);
+            color: var(--color-9);
+            transition: 1s;
+        }
+
+        .myths-and-legends-slogan {
+            margin-bottom: 2%;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .myths-and-legends-intro {
+            font-size: 20px;
+        }
+
+        .myths-and-legends-videos {
+            margin: 5% 5% 5% 0;
+            display: grid;
+            grid-template-columns: repeat(2, 40% 60%);
+            gap: 5%;
+        }
+
+        .myths-and-legends-videos a {
+            color: inherit;
+            text-decoration: inherit;
+        }
+
+        .myths-and-legends-videos p {
+            margin-bottom: 1vh;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .myths-and-legends-videos img {
+            width: 100%;
+            box-shadow: 5px 5px 1px 0px rgba(245, 245, 245, 0.5);
+            border-radius: 10px;
+            transition: 1s;
+        }
+
+        .myths-and-legends-videos img:hover {
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+        /* ------------------------------ rafael-studios ------------------------------ */
+
+        #rafael-studios {
+            background: #141013;
+            color: #E3E6FF;
+            font-family: var(--font-5);
+        }
+
+        .striving-fighter-slogan {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .striving-fighter-gallery {
+            margin: 3%;
+            display: grid;
+            gap: 3%;
+        }
+        
+        .striving-fighter-gallery-1 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .striving-fighter-gallery-2 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .striving-fighter-screenshot img {
+            width: 100%;
+            border: 5px #E3E6FF solid;
+            border-radius: 10px;
+            transition: 1s;
+        }
+
+        .striving-fighter-screenshot img:hover {
+            transform: scale(1.3);
+            transition: 1s;
+        }
+
+        .striving-fighter-link {
+            text-decoration: inherit;
+        }
+        
+        .striving-fighter-link p {
+            margin: 5% 7% 3% 7%;
+            padding: 1%;
+            background: #E3E6FF;
+            color: #141013;
+            font-size: 28px;
+            font-weight: 600;
+            border-radius: 10px;
+            text-align: center;
+            transition: 1s;
+        }
+        
+        .striving-fighter-link p:hover {
+            background: #141013;
+            color: #E3E6FF;
+            transition: 1s;
+        }
+        
+        </style>
+</head>
+<body>
+    <a href="#" class="scroll-anchor">&utri;</a>
+
+    <!-- ------------------------------ nav ------------------------------ -->
+    <nav>
+        <a href="/index.html#" class="nav-title">MDJeux63</a>
+        <div class="nav-links">
+            <a href="/index.html#a-propos">À propos</a>
+            <a href="/index.html#jeux-de-societe">Jeux de société</a>
+            <a href="/index.html#commander">Commander</a>
+            <a href="/index.html#gamedev">Gamedev</a>
+            <a href="/index.html#mdstock">MDStock</a>
+            <a href="/index.html#nos-videos">Nos vidéos</a>
+            <a href="/index.html#nous-rejoindre">Nous rejoindre</a>
+            <a href="/index.html#myths-and-legends">Myths and Legends</a>
+            <a href="/index.html#rafael-studios">Rafaël Studios</a>
+        </div>
+    </nav>
+
+    <!-- ------------------------------ header ------------------------------ -->
+    <header>
+        <div class="header-banner"></div>
+    </header>
+    
+    <!-- ------------------------------ a-propos ------------------------------ -->
+    <img src="/assets/images/separators/separator-1.png" alt="" class="separator">
+    <section id="a-propos">
+        <h2>Chers joueurs de cartes et minijeux, bienvenue&nbsp;!</h2>
+        <p>Depuis septembre 2023, nous proposons des jeux entièrement faits maison, créés par nos soins, imprimés sur du papier de qualité, découpés à la main et souvent accompagnés de dés et figurines, le tout vendu à des prix intéressants.</p>
+        <p>Voilà pourquoi nous vous invitons à les découvrir dès maintenant&nbsp;!</p>
+    </section>
+
+    <!-- ------------------------------ jeux-de-societe ------------------------------ -->
+    <img src="/assets/images/separators/separator-1.png" alt="" class="separator">
+    <section id="jeux-de-societe">
+        <h2>Tous nos minijeux de société</h2>
+        <div class="games-grid">
+            <div class="games-grid-item">
+                <div>
+                    <p class="game-name">Magic Potions</p>
+                    <p class="game-slogan">Combats à coups de dés et de potions</p>
+                </div>
+                <a href="https://youtu.be/mMAPET3suIQ" target="_blank" class="game-photo"><img src="/assets/images/games/game-magic-potions.png" alt="Photo de Magic Potions"></a>
+            </div>
+            <div class="games-grid-item">
+                <div>
+                    <p class="game-name">Memo Fantasy</p>
+                    <p class="game-slogan">Un jeu pour entrainer sa mémoire ou tout simplement pour s'amuser</p>
+                </div>
+                <a href="https://youtu.be/6tqI9lHHH5M" target="_blank" class="game-photo"><img src="/assets/images/games/game-memo-fantasy.png" alt="Photo de Memo Fantasy"></a>
+            </div>
+            <div class="games-grid-item">
+                <div>
+                    <p class="game-name">Memo Fantasy&#8239;: Les fées</p>
+                    <p class="game-slogan">Deuxième jeu de la série, cette fois-ci avec des fées</p>
+                </div>
+                <a href="https://youtu.be/uxyU8bO-TYk" target="_blank" class="game-photo"><img src="/assets/images/games/game-memo-fantasy-les-fees.png" alt="Photo de Memo Fantasy : Les fées"></a>
+            </div>
+            <div class="games-grid-item">
+                <div>
+                    <p class="game-name">Battle Mages</p>
+                    <p class="game-slogan">Le nouveau jeu de cartes à collectionner</p>
+                </div>
+                <a href="https://youtu.be/kUC52SIwzF4" target="_blank" class="game-photo"><img src="/assets/images/games/game-battle-mages.png" alt="Photo de Battle Mages"></a>
+            </div>
+            <div class="games-grid-item">
+                <div>
+                    <p class="game-name">Level Up</p>
+                    <p class="game-slogan">Qui sera le premier héros à monter de niveau&nbsp;?</p>
+                </div>
+                <a href="https://youtu.be/ZFaCs0k9oVE" target="_blank" class="game-photo"><img src="/assets/images/games/game-level-up.png" alt="Photo de Level Up"></a>
+            </div>
+            <div class="games-grid-item">
+                <div>
+                    <p class="game-name">Donjons Duel</p>
+                    <p class="game-slogan">Passez la porte sans oublier la clé</p>
+                </div>
+                <a href="https://youtu.be/QFf2ItMyzHg" target="_blank" class="game-photo"><img src="/assets/images/games/game-donjons-duel.png" alt="Photo de Donjons Duel"></a>
+            </div>
+            <div class="games-grid-item">
+                <div>
+                    <p class="game-name">DF&#8239;: Chasse aux gobelins</p>
+                    <p class="game-slogan">Terrassez les gobelins pour amasser le plus d’or</p>
+                </div>
+                <a href="https://youtu.be/zC40wiAnI8I" target="_blank" class="game-photo"><img src="/assets/images/games/game-df-chasse-aux-gobelins.png" alt="Photo de DF : Chasse aux gobelins"></a>
+            </div>
+            <div class="games-grid-item">
+                <div>
+                    <p class="game-name">DF&#8239;: Chasse aux orcs</p>
+                    <p class="game-slogan">Terrassez les orcs pour amasser le plus d’or</p>
+                </div>
+                <a href="https://youtu.be/oP_21k9IkO8" target="_blank" class="game-photo"><img src="/assets/images/games/game-df-chasse-aux-orcs.png" alt="Photo de DF : Chasse aux orcs"></a>
+            </div>
+            <div class="games-grid-item">
+                <div>
+                    <p class="game-name">Medieval Forge</p>
+                    <p class="game-slogan">Serez-vous le maitre forgeron&nbsp;?</p>
+                </div>
+                <a href="https://youtu.be/Kr5C90TWPV0" target="_blank" class="game-photo"><img src="/assets/images/games/game-medieval-forge.png" alt="Photo de Medieval Forge"></a>
+            </div>
+            <div class="games-grid-item">
+                <div>
+                    <p class="game-name">Tiny Dungeon</p>
+                    <p class="game-slogan">Seul le dé peut vous guider</p>
+                </div>
+                <a href="https://youtu.be/YOPY1pzIwPU" target="_blank" class="game-photo"><img src="/assets/images/games/game-tiny-dungeon.png" alt="Photo de Tiny Dungeon"></a>
+            </div>
+            <div class="games-grid-item">
+                <div>
+                    <p class="game-name">Epic Duel Fantasy</p>
+                    <p class="game-slogan">Hache, arc, bouclier&nbsp;: à vous de choisir</p>
+                </div>
+                <a href="https://youtu.be/Yb5HSlaDEBU" target="_blank" class="game-photo"><img src="/assets/images/games/game-epic-duel-fantasy.png" alt="Photo de Epic Duel Fantasy"></a>
+            </div>
+            <div class="games-grid-item">
+                <div>
+                    <p class="game-name">Battle Tavern</p>
+                    <p class="game-slogan">Au cœur des batailles enflammées de la taverne</p>
+                </div>
+                <a href="https://youtu.be/i-i7alC77ds" target="_blank" class="game-photo"><img src="/assets/images/games/game-battle-tavern.png" alt="Photo de Battle Tavern"></a>
+            </div>
+            <div class="games-grid-item">
+                <div>
+                    <p class="game-name">À venir…</p>
+                    <p class="game-slogan">En septembre 2024</p>
+                </div>
+                <a href="" target="_blank" class="game-photo"><img src="/assets/images/games/game-.png" alt="Photo à venir"></a>
+            </div>
+            <div class="games-grid-item">
+                <div>
+                    <p class="game-name">À venir…</p>
+                    <p class="game-slogan">En septembre 2024</p>
+                </div>
+                <a href="" target="_blank" class="game-photo"><img src="/assets/images/games/game-.png" alt="Photo à venir"></a>
+            </div>
+            <div class="games-grid-item">
+                <div>
+                    <p class="game-name">À venir…</p>
+                    <p class="game-slogan">En septembre 2024</p>
+                </div>
+                <a href="" target="_blank" class="game-photo"><img src="/assets/images/games/game-.png" alt="Photo à venir"></a>
+            </div>
+            <div class="games-grid-item">
+                <div>
+                    <p class="game-name">À venir…</p>
+                    <p class="game-slogan">En septembre 2024</p>
+                </div>
+                <a href="" target="_blank" class="game-photo"><img src="/assets/images/games/game-.png" alt="Photo à venir"></a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ------------------------------ commander ------------------------------ -->
+    <img src="/assets/images/separators/separator-1.png" alt="" class="separator">
+    <section id="commander">
+        <h2>Des jeux vous intéressent&nbsp;? Passez votre commande sans tarder&nbsp;!</h2>
+        <div class="form">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdnI8YvlLJUiBx0jgSPCGJzHzAh0FldUlHxEosic34KapVW2Q/viewform?embedded=true" width="640" height="560" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+        </div>
+    </section>
+    
+    <!-- ------------------------------ gamedev ------------------------------ -->
+    <img src="/assets/images/separators/separator-1.png" alt="" class="separator">
+    <section id="gamedev">
+        <h2>Gamedev</h2>
+        <p>Nous vous préparons quelques surprises, alors restez à l'affût !</p>
+    </section>
+    
+    <!-- ------------------------------ mdstock ------------------------------ -->
+    <img src="/assets/images/separators/separator-1.png" alt="" class="separator">
+    <section id="mdstock">
+        <h2>MDStock</h2>
+        <p>Le service MDStock est actuellement en maintenance, et sera fonctionnel à nouveau dans quelques jours.</p>
+    </section>
+    
+    <!-- ------------------------------ nos-videos ------------------------------ -->
+    <img src="/assets/images/separators/separator-1.png" alt="" class="separator">
+    <section id="nos-videos">
+        <h2>Nos vidéos</h2>
+        <div class="videos-grid">
+            <iframe src="https://www.youtube.com/embed/xxxxxxxxxxx" width="" height="" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/5l2BOSwWosI" width="" height="" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/QG_-OkAn0U4" width="" height="" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/iEX5fmD2mOE" width="" height="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+    
+    <!-- ------------------------------ nous-rejoindre ------------------------------ -->
+    <img src="/assets/images/separators/separator-1.png" alt="" class="separator">
+    <section id="nous-rejoindre">
+        <h2>Retrouvez-nous sur les réseaux sociaux&nbsp;!</h2>
+        <div class="social-grid">
+            <a href="https://www.youtube.com/@MDJeux63" target="_blank"><img src="/assets/images/logos/social-youtube.png" alt="Sur YouTube"></a>
+            <a href="https://www.facebook.com/MDJeux63.Games" target="_blank"><img src="/assets/images/logos/social-facebook.png" alt="Sur Facebook"></a>
+            <a href="https://www.instagram.com/mdjeux63" target="_blank"><img src="/assets/images/logos/social-instagram.png" alt="Sur Instagram"></a>
+            <a class="social-logo-disabled" href="" target="_blank"><img src="/assets/images/logos/social-tiktok.png" alt="Sur TikTok"></a>
+        </div>
+    </section>
+    
+    <!-- ------------------------------ myths-and-legends ------------------------------ -->
+    <img src="/assets/images/separators/separator-1.png" alt="" class="separator">
+    <section id="myths-and-legends">
+        <div class="myths-and-legends-infos">
+            <img src="/assets/images/logos/myths-and-legends-logo.png" alt="Logo de Myths and Legends" class="myths-and-legends-logo">
+            <a href="https://www.youtube.com/@MythsAndLegendsStories" target="_blank" class="myths-and-legends-link">Accéder à la chaine YouTube</a>
+        </div>
+        <div>
+            <p class="myths-and-legends-slogan">Histoires des mondes d'ici ou d'ailleurs.</p>
+            <p class="myths-and-legends-intro">Retrouvez les aventuriers de "Tales of the Realm" chaque mercredi et samedi, dès 16 heures, sur notre chaine YouTube.</p>
+            <div class="myths-and-legends-videos">
+                <a target="_blank" href="https://www.youtube.com/playlist?list=PLD0KGHk53y3LbiV1IIsyTdRtsTaIMtLlo">
+                    <p>La série en cours…</p>
+                    <img src="/assets/images/thumbnails/tales-of-the-realm-thumbnail-1.png" alt="Miniature de la série en cours">
+                </a>
+                <a target="_blank" href="https://youtu.be/jmyGQHmBKKc">
+                    <p>L'un des derniers épisodes sortis…</p>
+                    <img src="/assets/images/thumbnails/tales-of-the-realm-thumbnail-2.png" alt="Miniature de l'un des derniers épisodes sortis">
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ------------------------------ rafael-studios ------------------------------ -->
+    <img src="/assets/images/separators/separator-1.png" alt="" class="separator">
+    <section id="rafael-studios">
+        <h2>Striving Fighter</h2>
+        <p class="striving-fighter-slogan">Un jeu mobile en cours de développement dans lequel vous cliquez, cliquez, cliquez…</p>
+        <div class="striving-fighter-gallery striving-fighter-gallery-1">
+            <a class="striving-fighter-screenshot" href="/assets/images/screenshots/striving-fighter-screenshot-001.png" target="_blank"><img src="/assets/images/screenshots/striving-fighter-screenshot-001.png" alt="Capture d'écran de Striving Fighter"></a>
+            <a class="striving-fighter-screenshot" href="/assets/images/screenshots/striving-fighter-screenshot-002.png" target="_blank"><img src="/assets/images/screenshots/striving-fighter-screenshot-002.png" alt="Capture d'écran de Striving Fighter"></a>
+        </div>
+        <div class="striving-fighter-gallery striving-fighter-gallery-2">
+            <a class="striving-fighter-screenshot" href="/assets/images/screenshots/striving-fighter-screenshot-003.png" target="_blank"><img src="/assets/images/screenshots/striving-fighter-screenshot-003.png" alt="Capture d'écran de Striving Fighter"></a>
+            <a class="striving-fighter-screenshot" href="/assets/images/screenshots/striving-fighter-screenshot-004.png" target="_blank"><img src="/assets/images/screenshots/striving-fighter-screenshot-004.png" alt="Capture d'écran de Striving Fighter"></a>
+            <a class="striving-fighter-screenshot" href="/assets/images/screenshots/striving-fighter-screenshot-005.png" target="_blank"><img src="/assets/images/screenshots/striving-fighter-screenshot-005.png" alt="Capture d'écran de Striving Fighter"></a>
+        </div>
+        <a class="striving-fighter-link" href="https://github.com/MrRafael27/StrivingFighter" target="_blank"><p>Téléchargez les premières Snapshots du jeu sur la page GitHub du développeur MrRafael27</p></a>
+    </section>
+    
+    <!-- ------------------------------ footer ------------------------------ -->
+    <img src="/assets/images/separators/separator-1.png" alt="" class="separator">
+    <footer>
+        <p>&copy; 2024 &ndash; MDJeux63 &ndash; Tous droits réservés.</p>
+        <p><a href="https://drive.google.com/uc?id=1ZNMKtr6cNP9eltt3exNpknYRNd929C71&export=download" target="_blank">Mentions légales</a> &ndash; <a href="https://drive.google.com/uc?id=1e3azNr3XB6i-qXjx6N4hs9aPvs5eGuE-&export=download" target="_blank">Dossier de presse</a></p>
+        <p>Toutes les marques citées appartiennent à leurs propriétaires respectifs.</p>
+    </footer>
+</body>
+</html>

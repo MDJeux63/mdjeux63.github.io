@@ -1,0 +1,127 @@
+/* ------------------------------ fonts ------------------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap');
+
+@font-face {
+    font-family: 'Lucida Blackletter';
+    src: url('/assets/fonts/LucidaBlackletter.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* ------------------------------ global ------------------------------ */
+
+:root {
+    --font-1: "Noto Serif";
+    --font-2: "Eczar";
+    --font-3: "Lucida Blackletter";
+    --font-4: "Cinzel";
+    --font-5: "Crimson Pro";
+
+    --color-1: #111111;
+    --color-9: #F5F5F5;
+}
+
+* {
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--font-1), serif;
+    background: var(--color-9);
+    color: var(--color-1);
+}
+
+section {
+    padding: 5%;
+}
+
+h2, h3, h4, h5, h6 {
+    margin-bottom: 1%;
+    font-family: var(--font-2);
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.separator {
+    position: absolute;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.scroll-anchor {
+    position: fixed;
+    top: 90%;
+    left: 95%;
+    font-size: 40px;
+    color: inherit;
+    text-decoration: inherit;
+}
+
+/* ------------------------------ nav ------------------------------ */
+
+nav {
+    padding: 1% 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background: var(--color-1);
+}
+
+.nav-title {
+    margin-right: 3%;
+    color: var(--color-9);
+    font-family: var(--font-3);
+    font-size: 32px;
+    font-weight: initial;
+    text-decoration: inherit;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-links a {
+    padding: 1%;
+    color: var(--color-9);
+    font-weight: 600;
+    text-decoration: inherit;
+    transition: 1s;
+}
+
+.nav-links a:hover {
+    background: var(--color-9);
+    color: var(--color-1);
+    transition: 1s;
+}
+
+/* ------------------------------ footer ------------------------------ */
+
+footer {
+    padding: 2% 1.5% 1.5% 1.5%;
+    background: url(/assets/images/backgrounds/leather-bg-75.png);
+    color: var(--color-9);
+    font-size: 12px;
+    text-align: center;
+}
+
+footer p {
+    padding: .1%;
+}
+
+footer a {
+    color: inherit;
+    font-weight: 600;
+    text-decoration: inherit;
+    text-transform: uppercase;
+}
