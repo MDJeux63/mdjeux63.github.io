@@ -49,6 +49,7 @@
         }
 
         .game-name {
+            margin-bottom: 2%;
             font-family: var(--font-2);
             font-size: 24px;
             font-weight: 600;
@@ -183,6 +184,9 @@
         }
 
         .myths-and-legends-videos a {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
             color: inherit;
             text-decoration: inherit;
         }
@@ -278,12 +282,48 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
+            .videos-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 720px) {
+
+            .social-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .social-grid a img {
+                margin: 5%;
+            }
+
+            #myths-and-legends {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .myths-and-legends-infos {
+                margin: 0 0 7% 0;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20%;
+                align-items: center;
+            }
+
+            .myths-and-legends-link {
+                margin: 0;
+            }
+
         }
 
         @media (max-width: 480px) {
 
             .header-banner {
                 height: 20vh;
+            }
+
+            .videos-grid iframe {
+                height: 12.5vh;
             }
 
         }
@@ -474,7 +514,7 @@
     <img src="/assets/images/separators/separator-1-desktop.png" alt="" class="separator separator-desktop">
     <img src="/assets/images/separators/separator-1-mobile.png" alt="" class="separator separator-mobile">
     <section id="nos-videos">
-        <h2>Nos vidéos</h2>
+        <h2>Nos dernières vidéos</h2>
         <div class="videos-grid">
             <iframe src="https://www.youtube.com/embed/xxxxxxxxxxx" width="" height="" frameborder="0" allowfullscreen></iframe>
             <iframe src="https://www.youtube.com/embed/5l2BOSwWosI" width="" height="" frameborder="0" allowfullscreen></iframe>
