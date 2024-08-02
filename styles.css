@@ -4,23 +4,23 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
 @font-face {
     font-family: 'Lucida Blackletter';
     src: url('/assets/fonts/LucidaBlackletter.ttf');
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 /* ------------------------------ global ------------------------------ */
 
 :root {
     --font-1: "Noto Serif";
     --font-2: "Eczar";
-    --font-3: "Lucida Blackletter";
-    --font-4: "Cinzel";
-    --font-5: "Crimson Pro";
+    --font-3: "Cinzel";
+    --font-4: "Crimson Pro";
+    --font-5: "Lucida Blackletter";
 
     --color-1: #111111;
     --color-9: #F5F5F5;
@@ -44,10 +44,11 @@ section {
 }
 
 h2, h3, h4, h5, h6 {
-    margin-bottom: 1%;
+    margin-bottom: 2%;
     font-family: var(--font-2);
     font-size: 32px;
     font-weight: 600;
+    line-height: 120%;
     text-align: center;
 }
 
@@ -80,7 +81,7 @@ nav {
 .nav-title {
     margin-right: 3%;
     color: var(--color-9);
-    font-family: var(--font-3);
+    font-family: var(--font-5);
     font-size: 32px;
     font-weight: initial;
     text-decoration: inherit;
@@ -125,4 +126,43 @@ footer a {
     font-weight: 600;
     text-decoration: inherit;
     text-transform: uppercase;
+}
+
+/* ------------------------------ responsive ------------------------------ */
+
+@media (max-width: 960px) {
+
+    nav {
+        padding: 2%;
+        justify-content: center;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+}
+
+@media (min-width: 720px) {
+
+    .separator-desktop {
+        display: initial;
+    }
+
+    .separator-mobile {
+        display: none;
+    }
+
+}
+
+@media (max-width: 720px) {
+
+    .separator-desktop {
+        display: none;
+    }
+
+    .separator-mobile {
+        display: initial;
+    }
+
 }
