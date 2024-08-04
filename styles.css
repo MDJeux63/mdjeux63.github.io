@@ -52,12 +52,6 @@ h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-.separator {
-    position: absolute;
-    width: 100%;
-    transform: translateY(-50%);
-}
-
 .scroll-anchor {
     position: fixed;
     top: 90%;
