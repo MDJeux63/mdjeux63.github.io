@@ -93,6 +93,31 @@
 
         /* ------------------------------ commander ------------------------------ */
 
+        .form-link {
+            margin-bottom: 1%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .form-btn {
+            margin: 3% 20% 0 20%;
+            padding: 2%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: var(--color-1);
+            border-radius: 10px;
+        }
+        
+        .form-btn a {
+            color: var(--color-9);
+            font-size: 24px;
+            font-weight: 600;
+            text-decoration: inherit;
+        }
+        
         .form {
             display: flex;
             justify-content: center;
@@ -312,7 +337,27 @@
 
         }
 
+        @media (min-width: 720px) {
+
+            .form-btn {
+                display: none;
+            }
+
+        }
+
         @media (max-width: 720px) {
+
+            .form-link {
+                display: none;
+            }
+
+            .form-btn {
+                display: inherit;
+            }
+
+            .form {
+                display: none;
+            }
 
             .social-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -529,6 +574,8 @@
     <img src="/assets/images/separators/separator-1-mobile.png" alt="" class="separator-1 separator-mobile">
     <section id="commander">
         <h2>Des jeux vous intéressent&nbsp;? Passez votre commande sans tarder&nbsp;!</h2>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdnI8YvlLJUiBx0jgSPCGJzHzAh0FldUlHxEosic34KapVW2Q/viewform" target="_blank" class="form-link">Ouvrir dans une nouvelle fenêtre</a>
+        <div class="form-btn"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdnI8YvlLJUiBx0jgSPCGJzHzAh0FldUlHxEosic34KapVW2Q/viewform" target="_blank">Accéder au formulaire de commande</a></div>
         <div class="form">
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdnI8YvlLJUiBx0jgSPCGJzHzAh0FldUlHxEosic34KapVW2Q/viewform?embedded=true" width="640" height="560" frameborder="0" marginheight="0" marginwidth="0"></iframe>
         </div>
