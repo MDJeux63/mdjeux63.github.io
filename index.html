@@ -40,7 +40,7 @@
 
         /* ------------------------------ a-propos ------------------------------ */
 
-        #a-propos p {
+        .about-text {
             margin: 1% 5% 0 5%;
             font-size: 20px;
             text-align: justify;
@@ -110,6 +110,19 @@
         #gamedev {
             background: url(/assets/images/backgrounds/leather-bg-75.png);
             color: var(--color-9);
+        }
+
+        /* ------------------------------ mdstock ------------------------------ */
+
+        #mdstock {
+            display: grid;
+            grid-template-columns: repeat(2, 20% 80%);
+            align-items: center;
+            gap: 5%;
+        }
+
+        #mdstock img {
+            width: 100%;
         }
 
         /* ------------------------------ nos-videos ------------------------------ */
@@ -341,6 +354,14 @@
                 display: none;
             }
 
+            #mdstock {
+                display: flex;
+            }
+
+            #mdstock img {
+                display: none;
+            }
+
             .social-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -410,8 +431,8 @@
     <img src="/assets/images/separators/separator-1-mobile.png" alt="" class="separator-1 separator-mobile">
     <section id="a-propos">
         <h2>Chers joueurs de cartes et minijeux, bienvenue&nbsp;!</h2>
-        <p>Depuis septembre 2023, nous proposons des jeux entièrement faits maison, créés par nos soins, imprimés sur du papier de qualité, découpés à la main et souvent accompagnés de dés et figurines, le tout vendu à des prix intéressants.</p>
-        <p>Voilà pourquoi nous vous invitons à les découvrir dès maintenant&nbsp;!</p>
+        <p class="about-text">Depuis septembre 2023, nous proposons des jeux entièrement faits maison, créés par nos soins, imprimés sur du papier de qualité, découpés à la main et souvent accompagnés de dés et figurines, le tout vendu à des prix intéressants.</p>
+        <p class="about-text">Voilà pourquoi nous vous invitons à les découvrir dès maintenant&nbsp;!</p>
     </section>
 
     <!-- ------------------------------ jeux-de-societe ------------------------------ -->
@@ -557,7 +578,7 @@
     <section id="commander">
         <h2>Des jeux vous intéressent&nbsp;? Passez votre commande sans tarder&nbsp;!</h2>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdnI8YvlLJUiBx0jgSPCGJzHzAh0FldUlHxEosic34KapVW2Q/viewform" target="_blank" class="form-link">Ouvrir dans une nouvelle fenêtre</a>
-        <div class="primary-button form-button"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdnI8YvlLJUiBx0jgSPCGJzHzAh0FldUlHxEosic34KapVW2Q/viewform" target="_blank">Accéder au formulaire de commande</a></div>
+        <a class="primary-button form-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdnI8YvlLJUiBx0jgSPCGJzHzAh0FldUlHxEosic34KapVW2Q/viewform" target="_blank">Accéder au formulaire de commande</a>
         <div class="form">
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdnI8YvlLJUiBx0jgSPCGJzHzAh0FldUlHxEosic34KapVW2Q/viewform?embedded=true" width="640" height="560" frameborder="0" marginheight="0" marginwidth="0"></iframe>
         </div>
@@ -575,9 +596,12 @@
     <img src="/assets/images/separators/separator-1-desktop.png" alt="" class="separator-1 separator-desktop">
     <img src="/assets/images/separators/separator-1-mobile.png" alt="" class="separator-1 separator-mobile">
     <section id="mdstock">
-        <h2>MDStock</h2>
-        <p>Achetez nos belles images créées par l'Intelligence Artificielle générative et créative !</p>
-        <div class="primary-button"><a href="/mdstock.html">Accéder à la galerie MDStock</a></div>
+        <img src="/assets/images/logos/mdstock-logo.png" alt="Logo de MDStock">
+        <div>
+            <h2>MDStock</h2>
+            <p class="about-text">Achetez nos belles images créées par l'Intelligence Artificielle générative et créative !</p>
+            <a class="primary-button" href="/mdstock.html">Accéder à la galerie de MDStock</a>
+        </div>
     </section>
     
     <!-- ------------------------------ nos-videos ------------------------------ -->
