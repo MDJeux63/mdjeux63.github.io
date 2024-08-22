@@ -9,40 +9,46 @@
 
     <style>
 
-        body {
-            background: url(/assets/images/backgrounds/leather-bg-75.png);
+        .backtohome-link {
+            position: absolute;
+            top: 2%;
+            left: 1.25%;
+            padding: 1%;
+            background: var(--color-1);
+            color: var(--color-9);
+            font-weight: 600;
+            border-radius: 7px;
+            text-decoration: none;
+            transition: 1s;
         }
 
-        #legal {
-            height: 100vh;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
+        .backtohome-link:hover {
+            background: var(--color-9);
+            color: var(--color-1);
+            transition: 1s;
+        }
+
+        #a-propos {
+            margin-top: 15vh;
+            background: url(/assets/images/backgrounds/leather-bg-75.png);
+            color: var(--color-9);
         }
 
         a {
-            margin: 5%;
-            color: var(--color-9);
-            font-family: var(--font-2);
-            font-size: 40px;
-            font-weight: 600;
-            text-decoration: inherit;
-        }
-        
-        p {
-            margin: 5%;
-            color: var(--color-9);
-            font-size: 40px;
+            margin: 2%;
         }
 
     </style>
 </head>
 <body>
-    <section id="legal">
-        <p>Le service MDStock est actuellement en maintenance, et sera fonctionnel à nouveau dans quelques jours.</p>
-        <a href="/index.html#mdstock">Retourner sur la page d'accueil</a>
+    <a class="backtohome-link" href="/index.html">&larrhk;&nbsp;&nbsp;Retourner sur la page d'accueil</a>
+    <section id="a-propos">
+        <h2>Qu'est-ce que MDStock&nbsp;?</h2>
+    </section>
+    <section>
+        <a href="https://www.hostize.com/r/_9PyMnSEQa" target="_blank">Plus d'informations sur notre service ici</a>
+        <a href="https://drive.usercontent.google.com/download?id=1_D-bUij920EZmtyCdMz0jpu9JIoOvbgG&export=download" target="_blank">Notre galerie d'images ici</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSea1F6NZfPeua0LILNaCkZ1-L6TAzGWdoiZjeBidxsKcRZrFA/viewform" target="_blank">Accéder au formulaire de commande</a>
     </section>
 </body>
 </html>
