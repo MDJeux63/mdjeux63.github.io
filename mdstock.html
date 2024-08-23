@@ -9,46 +9,76 @@
 
     <style>
 
-        .backtohome-link {
-            position: absolute;
-            top: 2%;
-            left: 1.25%;
-            padding: 1%;
-            background: var(--color-1);
-            color: var(--color-9);
-            font-weight: 600;
-            border-radius: 7px;
-            text-decoration: none;
-            transition: 1s;
+        /* ------------------------------ header ------------------------------ */
+
+        .header-banner {
+            height: 60vh;
+            background: url(/assets/images/banners/mdstock-header-banner.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: 50%;
         }
 
-        .backtohome-link:hover {
-            background: var(--color-9);
-            color: var(--color-1);
-            transition: 1s;
-        }
+        /* ------------------------------ galerie ------------------------------ */
 
-        #a-propos {
-            margin-top: 15vh;
+        #galerie {
             background: url(/assets/images/backgrounds/leather-bg-75.png);
             color: var(--color-9);
         }
 
-        a {
-            margin: 2%;
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1%;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            transition: 1s;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.5);
+            transition: 1s;
         }
 
     </style>
 </head>
 <body>
-    <a class="backtohome-link" href="/index.html">&larrhk;&nbsp;&nbsp;Retourner sur la page d'accueil</a>
-    <section id="a-propos">
+    <!-- ------------------------------ header ------------------------------ -->
+    <header>
+        <div class="header-banner"></div>
+    </header>
+
+    <!-- ------------------------------ temporary ------------------------------ -->
+    <section id="temporary">
+        <a class="primary-button" style="width: 50vw; background: var(--color-1); color: var(--color-9);" href="/index.html">Retourner sur la page d'accueil</a>
+        <a class="primary-button" style="width: 50vw; background: var(--color-1); color: var(--color-9);" href="https://www.hostize.com/r/_9PyMnSEQa" target="_blank">Plus d'informations sur notre service ici</a>
+        <a class="primary-button" style="width: 50vw; background: var(--color-1); color: var(--color-9);" href="https://drive.usercontent.google.com/download?id=1_D-bUij920EZmtyCdMz0jpu9JIoOvbgG&export=download" target="_blank">Notre galerie d'images ici</a>
+        <a class="primary-button" style="width: 50vw; background: var(--color-1); color: var(--color-9);" href="https://docs.google.com/forms/d/e/1FAIpQLSea1F6NZfPeua0LILNaCkZ1-L6TAzGWdoiZjeBidxsKcRZrFA/viewform" target="_blank">Accéder au formulaire de commande</a>
+    </section>
+
+    <!-- ------------------------------ presentation ------------------------------ -->
+    <script src="/js/separators.js"></script>
+    <section id="presentation">
         <h2>Qu'est-ce que MDStock&nbsp;?</h2>
     </section>
-    <section>
-        <a href="https://www.hostize.com/r/_9PyMnSEQa" target="_blank">Plus d'informations sur notre service ici</a>
-        <a href="https://drive.usercontent.google.com/download?id=1_D-bUij920EZmtyCdMz0jpu9JIoOvbgG&export=download" target="_blank">Notre galerie d'images ici</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSea1F6NZfPeua0LILNaCkZ1-L6TAzGWdoiZjeBidxsKcRZrFA/viewform" target="_blank">Accéder au formulaire de commande</a>
+    
+    <!-- ------------------------------ galerie ------------------------------ -->
+    <script src="/js/separators.js"></script>
+    <section id="galerie">
+        <h2>Notre galerie d'images</h2>
+        <div class="gallery-grid"></div>
     </section>
+    
+    <!-- ------------------------------ acheter ------------------------------ -->
+    <script src="/js/separators.js"></script>
+    <section id="acheter">
+        <h2>Vous avez fait votre choix&nbsp;? Passez tout de suite votre commande&nbsp;!</h2>
+    </section>
+    
+    <!-- ------------------------------ footer ------------------------------ -->
+    <script src="/js/separators.js"></script>
+    <script src="/js/footer.js"></script>
 </body>
 </html>
