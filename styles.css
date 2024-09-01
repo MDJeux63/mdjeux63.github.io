@@ -40,7 +40,7 @@ body {
 
 section {
     padding: 5%;
-    scroll-margin: -1.5vh;
+    scroll-margin: 5vh;
 }
 
 h2, h3, h4, h5, h6 {
@@ -90,7 +90,7 @@ h2, h3, h4, h5, h6 {
 }
 
 .separator-2 {
-    margin-bottom: 10%;
+    margin: 10% 0 10% 0;
     width: 100%;
 }
 
@@ -105,6 +105,9 @@ h2, h3, h4, h5, h6 {
 /* ------------------------------ nav ------------------------------ */
 
 nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
     padding: 1% 2%;
     display: flex;
     justify-content: space-between;
