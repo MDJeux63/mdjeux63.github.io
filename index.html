@@ -8,15 +8,14 @@
     <link rel="stylesheet" href="styles.css">
 
     <style>
-        
+
         /* ------------------------------ header ------------------------------ */
 
         .header-banner {
-            height: 60vh;
             background: url(/assets/banners/header-banner.png);
             background-repeat: no-repeat;
             background-size: cover;
-            background-position-y: 50%;
+            background-position: center;
         }
 
         /* ------------------------------ a-propos ------------------------------ */
@@ -276,14 +275,6 @@
 
         @media (max-width: 960px) {
 
-            .separator-2-mobile {
-                display: initial;
-            }
-
-            .header-banner {
-                height: 30vh;
-            }
-
             .games-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -351,10 +342,6 @@
         }
 
         @media (max-width: 480px) {
-
-            .header-banner {
-                height: 20vh;
-            }
 
             .videos-grid iframe {
                 height: 12.5vh;
@@ -503,7 +490,10 @@
                     <p class="game-slogan">Les dés vous mèneront-ils à la victoire&nbsp;?</p>
                 </div>
                 <a href="https://youtu.be/aDFWQPXJqVE" target="_blank" class="game-photo"><img src="/assets/games/game-dice-wars.png" alt="Photo de Dice Wars"></a>
+                <!-- <img src="/assets/separators/separator-2.png" alt="" class="separator-2 separator-2-mobile">
                 <img src="/assets/separators/separator-2.png" alt="" class="separator-2 separator-2-mobile">
+                <img src="/assets/separators/separator-2.png" alt="" class="separator-2 separator-2-desktop">
+                <img src="/assets/separators/separator-2.png" alt="" class="separator-2 separator-2-desktop"> -->
             </div>
             <div class="games-grid-item">
                 <div>
@@ -511,7 +501,6 @@
                     <p class="game-slogan">Lorsque les légendes se rencontrent</p>
                 </div>
                 <a href="https://youtu.be/kMzQOZYCPhM" target="_blank" class="game-photo"><img src="/assets/games/game-legends-land.png" alt="Photo de Legends Land"></a>
-                <img src="/assets/separators/separator-2.png" alt="" class="separator-2 separator-2-mobile">
             </div>
             <div class="games-grid-item">
                 <div>
@@ -519,7 +508,6 @@
                     <p class="game-slogan">Pour gagner, vous devrez bien deviner</p>
                 </div>
                 <a href="https://youtu.be/BvLHepr7m8c" target="_blank" class="game-photo"><img src="/assets/games/game-double-raid.png" alt="Photo de Double Raid"></a>
-                <img src="/assets/separators/separator-2.png" alt="" class="separator-2 separator-2-desktop">
             </div>
             <div class="games-grid-item">
                 <div>
@@ -527,10 +515,9 @@
                     <p class="game-slogan">Attaquez, défendez, et vous battrez vos rivaux</p>
                 </div>
                 <a href="https://youtu.be/2nK-YHWBZTM" target="_blank" class="game-photo"><img src="/assets/games/game-skills-fight.png" alt="Photo de Skills Fight"></a>
-                <img src="/assets/separators/separator-2.png" alt="" class="separator-2 separator-2-desktop">
             </div>
         </div>
-        <a href="https://drive.usercontent.google.com/download?id=1fJ_BgyOskhjyi0kpbUM4Cbam3WxjPiqR&export=download" class="primary-button" target="_blank">Consulter la liste complète des jeux disponibles</a>
+        <a href="https://drive.usercontent.google.com/download?id=1fJ_BgyOskhjyi0kpbUM4Cbam3WxjPiqR&export=download" class="primary-button primary-button-dark" target="_blank">Consulter la liste complète des jeux disponibles</a>
     </section>
     
     <!-- ------------------------------ commander ------------------------------ -->

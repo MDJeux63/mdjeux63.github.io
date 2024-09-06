@@ -61,6 +61,8 @@ h2, h3, h4, h5, h6 {
     text-decoration: inherit;
 }
 
+/* ------------------------------ main-buttons ------------------------------ */
+
 .primary-button {
     margin: 3% 20% 0 20%;
     padding: 2%;
@@ -83,6 +85,18 @@ h2, h3, h4, h5, h6 {
     transition: 1s;
 }
 
+.primary-button-dark {
+    background: var(--color-9);
+    color: var(--color-1);
+}
+
+.primary-button:hover {
+    background: var(--color-1);
+    color: var(--color-9);
+}
+
+/* ------------------------------ separators ------------------------------ */
+
 .separator-1 {
     position: absolute;
     width: 100%;
@@ -92,14 +106,6 @@ h2, h3, h4, h5, h6 {
 .separator-2 {
     margin: 10% 0 10% 0;
     width: 100%;
-}
-
-.separator-2-mobile {
-    display: none;
-}
-
-.separator-2-desktop {
-    display: none;
 }
 
 /* ------------------------------ nav ------------------------------ */
@@ -133,6 +139,7 @@ nav {
 
 .nav-links a {
     padding: 1%;
+    align-self: center;
     color: var(--color-9);
     font-weight: 600;
     text-decoration: inherit;
@@ -143,6 +150,12 @@ nav {
     background: var(--color-9);
     color: var(--color-1);
     transition: 1s;
+}
+
+/* ------------------------------ header ------------------------------ */
+
+.header-banner {
+    height: 60vh;
 }
 
 /* ------------------------------ footer ------------------------------ */
@@ -179,6 +192,10 @@ footer a {
         display: none;
     }
 
+    .header-banner {
+        height: 30vh;
+    }
+
 }
 
 @media (min-width: 720px) {
@@ -201,6 +218,14 @@ footer a {
 
     .separator-mobile {
         display: initial;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .header-banner {
+        height: 20vh;
     }
 
 }
