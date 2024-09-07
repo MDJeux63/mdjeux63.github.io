@@ -90,7 +90,7 @@ h2, h3, h4, h5, h6 {
     color: var(--color-1);
 }
 
-.primary-button:hover {
+.primary-button-dark:hover {
     background: var(--color-1);
     color: var(--color-9);
 }
