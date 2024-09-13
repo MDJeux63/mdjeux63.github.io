@@ -112,6 +112,20 @@ a {
     width: 100%;
 }
 
+/* ------------------------------ forms ------------------------------ */
+
+.form-link {
+    margin-bottom: 1%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
 /* ------------------------------ nav ------------------------------ */
 
 nav {
@@ -215,6 +229,10 @@ footer a {
         display: none;
     }
 
+    .form-button {
+        display: none;
+    }
+
 }
 
 @media (max-width: 720px) {
@@ -225,6 +243,18 @@ footer a {
 
     .separator-mobile {
         display: initial;
+    }
+
+    .form-link {
+        display: none;
+    }
+
+    .form-button {
+        display: inherit;
+    }
+
+    .form {
+        display: none;
     }
 
 }

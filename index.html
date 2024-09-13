@@ -67,20 +67,6 @@
             transition: 1s;
         }
 
-        /* ------------------------------ commander ------------------------------ */
-
-        .form-link {
-            margin-bottom: 1%;
-            display: flex;
-            justify-content: center;
-            text-align: center;
-        }
-        
-        .form {
-            display: flex;
-            justify-content: center;
-        }
-
         /* ------------------------------ gamedev ------------------------------ */
 
         #gamedev {
@@ -153,11 +139,36 @@
         /* ------------------------------ myths-and-legends ------------------------------ */
 
         #myths-and-legends {
-            display: grid;
-            grid-template-columns: repeat(2, 40% 60%);
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
             background: linear-gradient(25deg, var(--color-1) 0%, #00203C 100%);
             color: var(--color-9);
             font-family: var(--font-3);
+        }
+
+        .myths-and-legends-category {
+            margin-bottom: 1vh;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .myths-and-legends-thumbnail {
+            width: 100%;
+            box-shadow: 6px 6px 2px 0px rgba(208, 218, 255, .4);
+            border-radius: 10px;
+            transition: 1s;
+        }
+        
+        .myths-and-legends-thumbnail:hover {
+            transform: scale(1.1);
+            transition: 1s;
+        }
+        
+        .myths-and-legends-main {
+            margin-bottom: 2%;
+            display: grid;
+            grid-template-columns: repeat(2, 40% 60%);
         }
 
         .myths-and-legends-infos {
@@ -215,22 +226,10 @@
             text-decoration: inherit;
         }
 
-        .myths-and-legends-videos p {
-            margin-bottom: 1vh;
-            font-size: 24px;
-            font-weight: 600;
-        }
-
-        .myths-and-legends-videos img {
-            width: 100%;
-            box-shadow: 6px 6px 2px 0px rgba(208, 218, 255, .4);
-            border-radius: 10px;
-            transition: 1s;
-        }
-
-        .myths-and-legends-videos img:hover {
-            transform: scale(1.1);
-            transition: 1s;
+        .myths-and-legends-podcasts-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 2%;
         }
 
         /* ------------------------------ rafael-studios ------------------------------ */
@@ -250,6 +249,7 @@
             margin: 3% 3% 0 3%;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            align-items: center;
         }
         
         .striving-fighter-links a {
@@ -285,27 +285,7 @@
 
         }
 
-        @media (min-width: 720px) {
-
-            .form-button {
-                display: none;
-            }
-
-        }
-
         @media (max-width: 720px) {
-
-            .form-link {
-                display: none;
-            }
-
-            .form-button {
-                display: inherit;
-            }
-
-            .form {
-                display: none;
-            }
 
             #mdstock {
                 display: flex;
@@ -327,6 +307,10 @@
                 grid-template-columns: repeat(1, 1fr);
             }
 
+            .myths-and-legends-main {
+                grid-template-columns: initial;
+            }
+
             .myths-and-legends-infos {
                 margin: 0 0 7% 0;
                 display: grid;
@@ -337,6 +321,10 @@
 
             .myths-and-legends-link {
                 margin: 0;
+            }
+
+            .myths-and-legends-podcasts-grid {
+                grid-template-columns: repeat(3, 1fr);
             }
 
         }
@@ -575,22 +563,31 @@
     <!-- ------------------------------ myths-and-legends ------------------------------ -->
     <script src="/js/separators.js"></script>
     <section id="myths-and-legends">
-        <div class="myths-and-legends-infos">
-            <img src="/assets/logos/myths-and-legends-logo.png" alt="Logo de Myths and Legends" class="myths-and-legends-logo">
-            <a href="https://www.youtube.com/@MythsAndLegendsStories" target="_blank" class="myths-and-legends-link">Accéder à la chaine YouTube</a>
+        <div class="myths-and-legends-main">
+            <div class="myths-and-legends-infos">
+                <img src="/assets/logos/myths-and-legends-logo.png" alt="Logo de Myths and Legends" class="myths-and-legends-logo">
+                <a href="https://www.youtube.com/@MythsAndLegendsStories" target="_blank" class="myths-and-legends-link">Accéder à la chaine YouTube</a>
+            </div>
+            <div>
+                <p class="myths-and-legends-slogan">Histoires des mondes d'ici ou d'ailleurs.</p>
+                <p class="myths-and-legends-intro">Retrouvez vos héros favoris et suivez-les dans leurs aventures rocambolesques et fantastiques, chaque mercredi et samedi dès 16 heures, sous la forme d'un récit à écouter sur notre chaine YouTube.</p>
+                <div class="myths-and-legends-videos">
+                    <a target="_blank" href="https://www.youtube.com/playlist?list=PLD0KGHk53y3Jqz6amb7SXdUd-emGbgwS-">
+                        <p class="myths-and-legends-category">La série en cours…</p>
+                        <img class="myths-and-legends-thumbnail" src="/assets/thumbnails/myths-and-legends-les-exploits-de-morgrim-thumbnail.png" alt="Miniature de la série en cours">
+                    </a>
+                    <a target="_blank" href="https://youtu.be/MVCYEoXyPMo">
+                        <p class="myths-and-legends-category">L'un des derniers épisodes sortis…</p>
+                        <img class="myths-and-legends-thumbnail" src="/assets/thumbnails/myths-and-legends-video-thumbnail.png" alt="Miniature de l'un des derniers épisodes sortis">
+                    </a>
+                </div>
+            </div>
         </div>
-        <div>
-            <p class="myths-and-legends-slogan">Histoires des mondes d'ici ou d'ailleurs.</p>
-            <p class="myths-and-legends-intro">Retrouvez vos héros favoris et suivez-les dans leurs aventures rocambolesques et fantastiques, chaque mercredi et samedi dès 16 heures, sous la forme d'un récit à écouter sur notre chaine YouTube.</p>
-            <div class="myths-and-legends-videos">
-                <a target="_blank" href="https://www.youtube.com/playlist?list=PLD0KGHk53y3KmNDNmQ0H9ua9YvejVYN6K">
-                    <p>La série en cours…</p>
-                    <img src="/assets/thumbnails/myths-and-legends-podcast-thumbnail.png" alt="Miniature de la série en cours">
-                </a>
-                <a target="_blank" href="https://youtu.be/wEO3-A6sf9Y">
-                    <p>L'un des derniers épisodes sortis…</p>
-                    <img src="/assets/thumbnails/myths-and-legends-video-thumbnail.png" alt="Miniature de l'un des derniers épisodes sortis">
-                </a>
+        <div class="myths-and-legends-podcasts">
+            <p class="myths-and-legends-category">Toutes les séries déjà disponibles en intégralité…</p>
+            <div class="myths-and-legends-podcasts-grid">
+                <a href="https://www.youtube.com/playlist?list=PLD0KGHk53y3KmNDNmQ0H9ua9YvejVYN6K" target="_blank"><img class="myths-and-legends-thumbnail" src="/assets/thumbnails/myths-and-legends-tharion-et-elyndra-thumbnail.png" alt="Podcast Tharion & Elyndra"></a>
+                <a href="https://www.youtube.com/playlist?list=PLD0KGHk53y3LbiV1IIsyTdRtsTaIMtLlo" target="_blank"><img class="myths-and-legends-thumbnail" src="/assets/thumbnails/myths-and-legends-tales-of-the-realm-thumbnail.png" alt="Podcast Tales of the Realm"></a>
             </div>
         </div>
     </section>
