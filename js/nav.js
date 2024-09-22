@@ -11,7 +11,6 @@ document.write(`
             <a href="/index.html#nos-videos">Nos vidéos</a>
             <a href="/index.html#nous-rejoindre">Nous rejoindre</a>
             <a href="/index.html#myths-and-legends">Myths and Legends</a>
-            <a href="/index.html#rafael-studios">Rafaël Studios</a>
         </div>
     </nav>
     
