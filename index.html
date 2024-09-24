@@ -27,7 +27,7 @@
         /* ------------------------------ jeux-de-societe ------------------------------ */
 
         #jeux-de-societe {
-            background: url(/assets/backgrounds/leather-bg-75.png);
+            background: url(/assets/backgrounds/leather-bg-75.jpg);
             color: var(--color-9);
         }
 
@@ -67,39 +67,19 @@
             transition: 1s;
         }
 
-        /* ------------------------------ gamedev ------------------------------ */
-
-        #gamedev {
-            background: url(/assets/backgrounds/leather-bg-75.png);
-            color: var(--color-9);
-        }
-
-        /* ------------------------------ mdstock ------------------------------ */
-
-        #mdstock {
-            display: grid;
-            grid-template-columns: repeat(2, 20% 80%);
-            align-items: center;
-            gap: 5%;
-        }
-
-        #mdstock img {
-            width: 100%;
-        }
-
         /* ------------------------------ nos-videos ------------------------------ */
 
         #nos-videos {
-            background: url(/assets/backgrounds/leather-bg-75.png);
+            background: url(/assets/backgrounds/leather-bg-75.jpg);
             color: var(--color-9);
         }
-
+        
         .videos-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 2%;
         }
-
+        
         .videos-grid iframe {
             width: 100%;
             height: 25vh;
@@ -135,6 +115,21 @@
             font-weight: 500;
             text-align: center;
             line-height: 125%;
+        }
+        
+        /* ------------------------------ mdstock ------------------------------ */
+        
+        #mdstock {
+            display: grid;
+            grid-template-columns: repeat(2, 20% 80%);
+            align-items: center;
+            gap: 5%;
+            background: url(/assets/backgrounds/leather-bg-75.jpg);
+            color: var(--color-9);
+        }
+
+        #mdstock img {
+            width: 100%;
         }
 
         /* ------------------------------ myths-and-legends ------------------------------ */
@@ -249,20 +244,20 @@
 
         @media (max-width: 720px) {
 
-            #mdstock {
-                display: flex;
-            }
-
-            #mdstock img {
-                display: none;
-            }
-
             .social-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             
             .social-grid a img {
                 margin: 5%;
+            }
+
+            #mdstock {
+                display: flex;
+            }
+
+            #mdstock img {
+                display: none;
             }
 
             #myths-and-legends {
@@ -466,24 +461,6 @@
         </div>
     </section>
     
-    <!-- ------------------------------ gamedev ------------------------------ -->
-    <script src="/js/separators.js"></script>
-    <section id="gamedev">
-        <h2>Gamedev</h2>
-        <p>Nous vous préparons quelques surprises, alors restez à l'affût&nbsp;!</p>
-    </section>
-    
-    <!-- ------------------------------ mdstock ------------------------------ -->
-    <script src="/js/separators.js"></script>
-    <section id="mdstock">
-        <img src="/assets/logos/mdstock-logo.png" alt="Logo de MDStock">
-        <div>
-            <h2>MDStock</h2>
-            <p class="about-text">Achetez nos belles images créées par l'Intelligence Artificielle générative et créative&nbsp;!</p>
-            <a class="primary-button" href="/mdstock.html">Accéder à la galerie de MDStock</a>
-        </div>
-    </section>
-    
     <!-- ------------------------------ nos-videos ------------------------------ -->
     <script src="/js/separators.js"></script>
     <section id="nos-videos">
@@ -507,6 +484,17 @@
             <a class="social-logo-disabled" href="" target="_blank"><img src="/assets/logos/social-tiktok.png" alt="Sur TikTok"></a>
         </div>
         <p class="contact-email">Pour nous contacter directement&#8239;: <a href="mailto:autoedit.mdjeux63@gmail.com">autoedit.mdjeux63@gmail.com</a></p>
+    </section>
+    
+    <!-- ------------------------------ mdstock ------------------------------ -->
+    <script src="/js/separators.js"></script>
+    <section id="mdstock">
+        <img src="/assets/logos/mdstock-logo.png" alt="Logo de MDStock">
+        <div>
+            <h2>MDStock</h2>
+            <p class="about-text">Achetez nos belles images créées par l'Intelligence Artificielle générative et créative&nbsp;!</p>
+            <a class="primary-button primary-button-dark" href="/mdstock.html">Accéder à la galerie de MDStock</a>
+        </div>
     </section>
     
     <!-- ------------------------------ myths-and-legends ------------------------------ -->
