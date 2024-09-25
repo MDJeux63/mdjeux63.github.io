@@ -167,6 +167,10 @@ nav {
     transition: 1s;
 }
 
+.nav-link-myths-and-legends {
+    font-family: var(--font-3);
+}
+
 /* ------------------------------ header ------------------------------ */
 
 .header-banner {

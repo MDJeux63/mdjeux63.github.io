@@ -9,7 +9,7 @@ document.write(`
             <a href="/index.html#nos-videos">Nos vidéos</a>
             <a href="/index.html#nous-rejoindre">Nous rejoindre</a>
             <a href="/index.html#mdstock">MDStock</a>
-            <a href="/index.html#myths-and-legends">Myths and Legends</a>
+            <a href="/index.html#myths-and-legends" class="nav-link-myths-and-legends">Myths and Legends</a>
         </div>
     </nav>
     
