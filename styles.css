@@ -53,6 +53,11 @@ a {
     color: #0080FF;
 }
 
+footer, #jeux-de-societe, #nos-videos, #mdstock, #galerie {
+    background: url(/assets/backgrounds/leather-bg-75.jpg);
+    background-size: 70%;
+}
+
 .scroll-anchor {
     position: fixed;
     top: 90%;
@@ -184,7 +189,6 @@ nav {
 
 footer {
     padding: 2% 1.5% 1.5% 1.5%;
-    background: url(/assets/backgrounds/leather-bg-75.jpg);
     color: var(--color-9);
     font-size: 12px;
     text-align: center;
@@ -208,6 +212,10 @@ footer a {
     nav {
         padding: 2%;
         justify-content: center;
+    }
+
+    .nav-title {
+        margin: 0;
     }
 
     .nav-links {
