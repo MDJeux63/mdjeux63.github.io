@@ -32,19 +32,19 @@
 
 * {
     scroll-behavior: smooth;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: var(--font-1), serif;
-    background: var(--color-9);
-    color: var(--color-1);
+    background: url(/assets/backgrounds/leather-bg-75.jpg);
+    color: var(--color-9);
 }
 
 section {
-    padding: 5%;
     scroll-margin: 5vh;
+    padding: 5%;
 }
 
 h2, h3, h4, h5, h6 {
@@ -60,9 +60,10 @@ a {
     color: #0080FF;
 }
 
-footer, #jeux-de-societe, #nos-videos, #mdstock, #galerie {
-    background: url(/assets/backgrounds/leather-bg-75.jpg);
+#a-propos, #commander, #nous-rejoindre, #presentation, #acheter {
+    background: var(--color-9);
     background-size: 70%;
+    color: var(--color-1);
 }
 
 .scroll-anchor {
@@ -196,7 +197,6 @@ nav {
 
 footer {
     padding: 2% 1.5% 1.5% 1.5%;
-    color: var(--color-9);
     font-size: var(--font-size-1);
     text-align: center;
 }
