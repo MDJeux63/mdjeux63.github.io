@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invasion Z | Bêta-test fermé disponible !</title>
+    <link
+      rel="shortcut icon"
+      href="/gamedev/invasion-z/icon-256.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        position: relative;
+      }
+
+      #about {
+        padding: 5% 10%;
+        background: url(/gamedev/invasion-z/assets-info-page/bg-mask.jpg)
+          no-repeat;
+        background-size: cover;
+        color: #b4b4b4;
+        font-family: "Rowdies", sans-serif;
+      }
+
+      h2 {
+        margin-bottom: 3%;
+        text-align: center;
+        color: #f2cc0d;
+        font-family: inherit;
+        font-size: var(--font-size-8);
+        text-transform: uppercase;
+        text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+        transition: 2s;
+      }
+
+      h2:hover {
+        color: #d92626;
+        transition: 2s;
+      }
+
+      h3 {
+        margin-bottom: 7%;
+        text-align: center;
+        color: #d92626;
+        font-family: inherit;
+        font-size: var(--font-size-7);
+        text-transform: uppercase;
+        text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+        transition: 2s;
+      }
+
+      h3:hover {
+        color: #f2cc0d;
+        transition: 2s;
+      }
+
+      .description {
+        text-align: center;
+        font-size: var(--font-size-6);
+      }
+
+      .game-download {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 15vh;
+        padding: 1%;
+        margin: 5% 0;
+        background: linear-gradient(45deg, #f2cc0d, #f2800d);
+        color: #111111;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+        font-size: var(--font-size-5);
+        text-align: center;
+        text-decoration: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+
+      .game-download:hover {
+        background: linear-gradient(45deg, #380f8a, #8a0f8a);
+        color: #b4b4b4;
+        transition: 0.5s;
+      }
+
+      .game-download img {
+        margin-right: 5%;
+        height: 100%;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+      }
+
+      .config {
+        margin: 5% 15%;
+        padding: 2%;
+        background: rgba(0, 0, 0, 0.5);
+        border: 2px solid #b4b4b4;
+        border-radius: 10px;
+      }
+
+      .config h3 {
+        margin-bottom: 3%;
+        font-size: var(--font-size-5);
+        font-family: inherit;
+      }
+
+      .config p {
+        margin-bottom: 1%;
+        font-size: var(--font-size-3);
+      }
+
+      .config img {
+        margin: 1% 0 2% 0;
+        width: 30%;
+      }
+
+      .end-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .end-links a {
+        margin: 5%;
+        padding: 2%;
+        text-align: center;
+        color: inherit;
+        font-size: var(--font-size-2);
+        background: rgba(0, 0, 0, 0.5);
+        border: 2px solid #b4b4b4;
+        border-radius: 10px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+
+      .end-links a:hover {
+        background: #380f8a;
+        color: #b4b4b4;
+        transition: 0.5s;
+      }
+
+      dialog {
+        position: absolute;
+        font-family: "Rowdies", sans-serif;
+        padding: 5%;
+        top: 50%;
+        left: 50%;
+        font-size: var(--font-size-3);
+        background: url(/assets/backgrounds/leather-bg-75.jpg);
+        color: #b4b4b4;
+        transform: translate(-50%, -50%);
+        border: 5px solid #380f8a;
+        border-radius: 10px;
+        box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.7);
+      }
+
+      dialog h3 {
+        font-size: var(--font-size-5);
+      }
+
+      dialog ol li {
+        margin-bottom: 5%;
+      }
+
+      .popup-btn {
+        display: inline-block;
+        margin-bottom: 5%;
+        padding: 3% 5%;
+        text-align: center;
+        background: linear-gradient(45deg, #f2cc0d, #f2800d);
+        color: #111111;
+        font-family: inherit;
+        font-size: var(--font-size-5);
+        border: none;
+        border-radius: 10px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 1s;
+      }
+
+      .popup-btn:hover {
+        background: linear-gradient(45deg, #380f8a, #8a0f8a);
+        color: #b4b4b4;
+        transition: 1s;
+      }
+
+      .popup-btn:last-child {
+        margin-bottom: 0;
+        font-size: var(--font-size-3);
+      }
+
+      @media (max-width: 480px) {
+        dialog {
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script src="/js/scroll-anchor.js"></script>
+
+    <!-- ------------------------------ popup ------------------------------ -->
+    <dialog id="popup">
+      <h3>Instructions pour l'installation</h3>
+      <ol>
+        <li>
+          Cliquez sur le bouton ci-dessous pour vous inscrire au programme de
+          bêta-test.
+        </li>
+        <a
+          target="_blank"
+          href="https://play.google.com/apps/testing/com.mdjeux63.invasionz"
+          class="popup-btn"
+          >S'inscrire au programme de bêta-test
+        </a>
+        <li>
+          Sur la page d'inscription, cliquez sur le bouton "Become a tester"
+          ("Devenir testeur").
+        </li>
+        <li>
+          Cliquez sur le lien d'installation "Download it on Google Play"
+          ("Téléchargez-le sur Google Play").
+        </li>
+        <li>Vous pouvez désormais installer le jeu sur votre appareil !</li>
+      </ol>
+      <button class="popup-btn" id="closePopup">Fermer</button>
+    </dialog>
+
+    <!-- ------------------------------ about ------------------------------ -->
+    <section id="about">
+      <h2>Invasion Z</h2>
+      <h3>Bêta-test fermé disponible !</h3>
+
+      <p class="description">
+        Invasion Z est un jeu d'arcade minimaliste et addictif. Arriverez-vous à
+        vaincre tous les zombies ? Battrez-vous votre record d'ennemis éliminés
+        ?
+      </p>
+
+      <div id="openPopup" class="game-download">
+        <img src="/gamedev/invasion-z/icon-256.png" alt="Icône du jeu" />
+        Télécharger maintenant la version de test fermé
+      </div>
+
+      <div class="config">
+        <h3>Configuration requise</h3>
+        <p>
+          Système d'exploitation&nbsp;:<br />Android 6.0 Marshmallow (minimum)
+          &ndash; Android 15 (recommandé)
+        </p>
+        <img
+          src="/gamedev/invasion-z/assets-info-page/google-play-logo.svg"
+          alt="Logo Google Play"
+        />
+        <p>100&nbsp;Mo d'espace disque disponible</p>
+        <p>Requiert une connexion Internet pour jouer</p>
+      </div>
+
+      <div class="end-links">
+        <a href="/gamedev/invasion-z/legal.html"
+          >Consulter la politique de confidentialité (en anglais)</a
+        >
+        <a href="mailto:autoedit.mdjeux63@gmail.com"
+          >Contacter l'équipe de développement (feedback par e-mail)</a
+        >
+      </div>
+    </section>
+
+    <!-- ------------------------------ footer ------------------------------ -->
+    <script src="/js/separators.js"></script>
+    <script src="/js/footer.js"></script>
+
+    <!-- ------------------------------ script-popup ------------------------------ -->
+    <script>
+      const popup = document.getElementById("popup");
+      const openButton = document.getElementById("openPopup");
+      const closeButton = document.getElementById("closePopup");
+
+      openButton.addEventListener("click", () => {
+        popup.showModal();
+      });
+
+      closeButton.addEventListener("click", () => {
+        popup.close();
+      });
+    </script>
+  </body>
+</html>
