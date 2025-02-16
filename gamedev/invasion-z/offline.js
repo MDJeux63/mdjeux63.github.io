@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1738429720,
+	"version": 1739704442,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -20,12 +20,15 @@
 		"images/mdlogo-sheet0.png",
 		"images/infobtn-sheet0.png",
 		"images/rules-sheet0.png",
+		"images/sprite2-sheet0.png",
 		"media/pistol.m4a",
 		"media/pistol.ogg",
 		"media/1911-reload-6248.m4a",
 		"media/1911-reload-6248.ogg",
 		"media/zombie-growl-3-6863.m4a",
 		"media/zombie-growl-3-6863.ogg",
+		"media/diabolic-laugh-202978.m4a",
+		"media/diabolic-laugh-202978.ogg",
 		"media/music.m4a",
 		"media/music.ogg",
 		"icon-16.png",
