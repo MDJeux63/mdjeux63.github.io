@@ -202,6 +202,12 @@
         font-size: var(--font-size-3);
       }
 
+      .popup_mail-email {
+        margin: 5% 10%;
+        font-size: var(--font-size-5);
+        text-align: center;
+      }
+
       @media (max-width: 480px) {
         dialog {
           width: 90%;
@@ -212,8 +218,8 @@
   <body>
     <script src="/js/scroll-anchor.js"></script>
 
-    <!-- ------------------------------ popup ------------------------------ -->
-    <dialog id="popup">
+    <!-- ------------------------------ popup_betatest ------------------------------ -->
+    <dialog id="popup_betatest">
       <h3>Instructions pour l'installation</h3>
       <ol>
         <li>
@@ -238,7 +244,15 @@
           Vous pouvez désormais installer le jeu sur votre appareil&nbsp;!
         </li>
       </ol>
-      <button class="popup-btn" id="closePopup">Fermer</button>
+      <button class="popup-btn" id="closePopup_betatest">Fermer</button>
+    </dialog>
+
+    <!-- ------------------------------ popup_mail ------------------------------ -->
+    <dialog id="popup_mail">
+      <h3>Contacter l'équipe de développement</h3>
+      <p>Feedback par e-mail à l'adresse&nbsp;:</p>
+      <p class="popup_mail-email">autoedit.mdjeux63@gmail.com</p>
+      <button class="popup-btn" id="closePopup_mail">Fermer</button>
     </dialog>
 
     <!-- ------------------------------ about ------------------------------ -->
@@ -252,7 +266,7 @@
         éliminés&nbsp;?
       </p>
 
-      <div id="openPopup" class="game-download">
+      <div id="openPopup_betatest" class="game-download">
         <img src="/gamedev/invasion-z/icon-256.png" alt="Icône du jeu" />
         Télécharger maintenant la version de test fermé
       </div>
@@ -275,9 +289,9 @@
         <a href="/gamedev/invasion-z/legal.html"
           >Consulter la politique de confidentialité (en anglais)</a
         >
-        <a href="mailto:autoedit.mdjeux63@gmail.com"
-          >Contacter l'équipe de développement (feedback par e-mail)</a
-        >
+        <a id="openPopup_mail">
+          Contacter l'équipe de développement (feedback par e-mail)
+        </a>
       </div>
     </section>
 
@@ -287,16 +301,30 @@
 
     <!-- ------------------------------ script-popup ------------------------------ -->
     <script>
-      const popup = document.getElementById("popup");
-      const openButton = document.getElementById("openPopup");
-      const closeButton = document.getElementById("closePopup");
+      const popup_betatest = document.getElementById("popup_betatest");
+      const openButton_betatest = document.getElementById("openPopup_betatest");
+      const closeButton_betatest = document.getElementById(
+        "closePopup_betatest"
+      );
 
-      openButton.addEventListener("click", () => {
-        popup.showModal();
+      openButton_betatest.addEventListener("click", () => {
+        popup_betatest.showModal();
       });
 
-      closeButton.addEventListener("click", () => {
-        popup.close();
+      closeButton_betatest.addEventListener("click", () => {
+        popup_betatest.close();
+      });
+
+      const popup_mail = document.getElementById("popup_mail");
+      const openButton_mail = document.getElementById("openPopup_mail");
+      const closeButton_mail = document.getElementById("closePopup_mail");
+
+      openButton_mail.addEventListener("click", () => {
+        popup_mail.showModal();
+      });
+
+      closeButton_mail.addEventListener("click", () => {
+        popup_mail.close();
       });
     </script>
   </body>
