@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1740247875,
+	"version": 1740308143,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -32,6 +32,7 @@
 		"images/ingameicon_z-sheet0.png",
 		"images/ingameicon_b-sheet0.png",
 		"images/button_ranks-sheet0.png",
+		"images/partic_3.png",
 		"media/pistol.m4a",
 		"media/pistol.ogg",
 		"media/1911-reload-6248.m4a",
