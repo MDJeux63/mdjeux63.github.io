@@ -122,12 +122,14 @@ a {
 /* ------------------------------ separators ------------------------------ */
 
 .separator-1 {
+  z-index: 100;
   position: absolute;
   width: 100%;
   transform: translateY(-50%);
 }
 
 .separator-2 {
+  z-index: 100;
   margin: 10% 0;
   width: 100%;
 }

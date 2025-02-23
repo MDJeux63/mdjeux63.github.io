@@ -12,7 +12,11 @@
     <link rel="stylesheet" href="/styles.css" />
 
     <style>
+      /* ------------------------------ fonts ------------------------------ */
+
       @import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap");
+
+      /* ------------------------------ global ------------------------------ */
 
       * {
         margin: 0;
@@ -20,17 +24,66 @@
         box-sizing: border-box;
       }
 
-      body {
-        position: relative;
-      }
-
-      #about {
+      section {
         padding: 5% 10%;
-        background: url(/gamedev/invasion-z/assets-info-page/bg-mask.jpg)
-          no-repeat;
-        background-size: cover;
         color: #b4b4b4;
         font-family: "Rowdies", sans-serif;
+      }
+
+      h2,
+      h3 {
+        margin-bottom: 3%;
+        text-align: center;
+        font-family: inherit;
+        text-transform: uppercase;
+        text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+        transition: 2s;
+      }
+
+      h2 {
+        color: #f2cc0d;
+        font-size: var(--font-size-6);
+      }
+
+      h3 {
+        color: #d92626;
+        font-size: var(--font-size-5);
+      }
+
+      h2:hover {
+        color: #d92626;
+        transition: 2s;
+      }
+
+      h3:hover {
+        color: #f2cc0d;
+        transition: 2s;
+      }
+
+      /* ------------------------------ go-to-home ------------------------------ */
+
+      .go-to-home {
+        margin: 1%;
+        width: 5%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .go-to-home p {
+        margin-top: 7%;
+        font-size: var(--font-size-1);
+        text-align: center;
+        font-weight: 500;
+      }
+
+      /* ------------------------------ intro ------------------------------ */
+
+      #intro {
+        background: url(/gamedev/invasion-z/showcase/bg-2-mask.jpg) no-repeat;
+        background-size: cover;
       }
 
       .game-logo {
@@ -46,29 +99,6 @@
 
       .subtitle {
         font-size: var(--font-size-7);
-        color: #f2cc0d;
-        transition: 2s;
-      }
-
-      .subtitle:hover {
-        color: #d92626;
-        transition: 2s;
-      }
-
-      h3 {
-        margin-bottom: 7%;
-        text-align: center;
-        color: #d92626;
-        font-family: inherit;
-        font-size: var(--font-size-5);
-        text-transform: uppercase;
-        text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
-        transition: 2s;
-      }
-
-      h3:hover {
-        color: #f2cc0d;
-        transition: 2s;
       }
 
       .description {
@@ -109,17 +139,83 @@
         border-radius: 10px;
       }
 
+      /* ------------------------------ trailer ------------------------------ */
+
+      #trailer {
+        padding: 0;
+        display: grid;
+        grid-template-columns: 5fr 3fr;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #trailer video {
+        width: 100%;
+        mask-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 1) 80%,
+          rgba(0, 0, 0, 0) 100%
+        );
+      }
+
+      .trailer-about {
+        margin: 10%;
+        font-size: var(--font-size-3);
+        line-height: 1.5;
+      }
+
+      .trailer-about h3 {
+        margin-bottom: 7%;
+      }
+
+      .trailer-about .highlight {
+        color: #f2cc0d;
+        text-transform: uppercase;
+      }
+
+      /* ------------------------------ gallery ------------------------------ */
+
+      #gallery {
+        background: url(/gamedev/invasion-z/showcase/bg-2-mask.jpg) no-repeat;
+        background-size: cover;
+      }
+
+      .screenshots {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1%;
+      }
+
+      .screenshots img {
+        width: 100%;
+        border: 2px solid #8a0f8a;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+      }
+
+      .screenshots img:hover {
+        transform: scale(1.3);
+        transition: 0.5s;
+      }
+
+      /* ------------------------------ outro ------------------------------ */
+
+      #outro {
+        background: url(/gamedev/invasion-z/showcase/bg-1.png) no-repeat;
+        background-size: cover;
+      }
+
       .config {
-        margin: 5% 15%;
+        margin: 0 15% 5% 15%;
         padding: 2%;
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.7);
         border: 2px solid #b4b4b4;
         border-radius: 10px;
       }
 
       .config h3 {
         margin-bottom: 3%;
-        font-family: inherit;
       }
 
       .config p {
@@ -138,12 +234,12 @@
       }
 
       .end-links a {
-        margin: 5%;
+        margin: 0 5%;
         padding: 2%;
         text-align: center;
         color: inherit;
         font-size: var(--font-size-2);
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.7);
         border: 2px solid #b4b4b4;
         border-radius: 10px;
         text-decoration: none;
@@ -156,6 +252,8 @@
         color: #b4b4b4;
         transition: 0.5s;
       }
+
+      /* ------------------------------ popups ------------------------------ */
 
       dialog {
         position: absolute;
@@ -209,15 +307,80 @@
         text-align: center;
       }
 
-      @media (max-width: 480px) {
+      /* ------------------------------ responsive ------------------------------ */
+
+      @media (max-width: 1440px) {
+        .game-logo {
+          padding: 0 15% 3% 15%;
+        }
+
         dialog {
-          width: 90%;
+          width: 75%;
+        }
+      }
+
+      @media (max-width: 1280px) {
+        #trailer {
+          display: initial;
+        }
+
+        #trailer video {
+          mask-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 1) 80%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+      }
+
+      @media (max-width: 960px) {
+        .go-to-home img {
+          display: none;
+        }
+
+        .game-logo {
+          padding: 0 5% 3% 5%;
+        }
+
+        .screenshots {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .config {
+          margin: 5% 0;
+        }
+
+        .end-links {
+          grid-template-columns: repeat(1, 1fr);
+        }
+
+        .end-links a {
+          margin: 2% 0;
+        }
+
+        dialog {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .screenshots {
+          grid-template-columns: repeat(1, 1fr);
         }
       }
     </style>
   </head>
   <body>
     <script src="/js/scroll-anchor.js"></script>
+
+    <!-- ------------------------------ go-to-home ------------------------------ -->
+    <a class="go-to-home" href="/index.html"
+      ><img
+        src="/gamedev/invasion-z/showcase/md-icon.png"
+        alt="Logo de MDJEUX63"
+      />
+      <p>&larrhk;&nbsp;Accueil</p></a
+    >
 
     <!-- ------------------------------ popup_betatest ------------------------------ -->
     <dialog id="popup_betatest">
@@ -256,14 +419,14 @@
       <button class="popup-btn" id="closePopup_mail">Fermer</button>
     </dialog>
 
-    <!-- ------------------------------ about ------------------------------ -->
-    <section id="about">
+    <!-- ------------------------------ intro ------------------------------ -->
+    <section id="intro">
       <img
         class="game-logo"
-        src="/gamedev/invasion-z/assets-info-page/game-logo.png"
+        src="/gamedev/invasion-z/showcase/game-logo.png"
         alt="Logo du jeu"
       />
-      <h3 class="subtitle">Bêta-test fermé disponible&nbsp;!</h3>
+      <h2 class="subtitle">Bêta-test fermé disponible&nbsp;!</h2>
 
       <p class="description">
         Invasion Z est un jeu d'arcade minimaliste et addictif. Arriverez-vous à
@@ -275,19 +438,61 @@
         <img src="/gamedev/invasion-z/icon-256.png" alt="Icône du jeu" />
         Télécharger maintenant la version de test fermé
       </div>
+    </section>
 
+    <!-- ------------------------------ trailer ------------------------------ -->
+    <!-- <script src="/js/separators.js"></script>
+    <section id="trailer">
+      <video
+        src="/gamedev/invasion-z/showcase/trailer.webm"
+        loop
+        autoplay
+        muted
+      ></video>
+      <div class="trailer-about">
+        <h3>À propos du jeu</h3>
+        <p>
+          Dans <span class="highlight">Invasion Z</span>, vous devez massacrer
+          le plus de zombies qui se dressent devant vous. Mais souvenez-vous
+          aussi de récupérer des munitions, sans quoi vous perdrez face à la
+          horde. Éliminez le maximum d'adversaires pour atteindre toujours plus
+          de nouveaux grades. Comme dans tous les jeux d'arcade, votre score
+          apparait à l'écran&nbsp;: tentez de battre votre record ou même celui
+          de vos amis.
+        </p>
+      </div>
+    </section> -->
+
+    <!-- ------------------------------ gallery ------------------------------ -->
+    <!-- <script src="/js/separators.js"></script>
+    <section id="gallery">
+      <h2>Captures d'écran</h2>
+      <div class="screenshots">
+        <a target="_blank" href="/gamedev/invasion-z/showcase/screenshot-1.jpg">
+          <img
+            src="/gamedev/invasion-z/showcase/screenshot-1.jpg"
+            alt="Capture d'écran 1"
+          />
+        </a>
+      </div>
+    </section> -->
+
+    <!-- ------------------------------ outro ------------------------------ -->
+    <script src="/js/separators.js"></script>
+    <section id="outro">
       <div class="config">
         <h3>Configuration requise</h3>
         <p>
           Système d'exploitation&nbsp;:<br />Android 6.0 Marshmallow (minimum)
           &ndash; Android 15 (recommandé)
         </p>
-        <img
-          src="/gamedev/invasion-z/assets-info-page/google-play-logo.svg"
-          alt="Logo Google Play"
-        />
         <p>100&nbsp;Mo d'espace disque disponible</p>
         <p>Requiert une connexion Internet pour jouer</p>
+
+        <img
+          src="/gamedev/invasion-z/showcase/google-play-logo.svg"
+          alt="Logo Google Play"
+        />
       </div>
 
       <div class="end-links">
