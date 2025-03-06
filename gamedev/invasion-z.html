@@ -150,9 +150,40 @@
         align-items: center;
       }
 
-      #trailer video {
-        width: 100%;
+      .trailer-video {
+        position: relative;
+      }
+
+      .trailer-youtube-button {
+        position: absolute;
+        top: 85%;
+        margin-left: 3%;
+        padding: 1%;
+        background: linear-gradient(45deg, #380f8a, #8a0f8a);
+        box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+        color: #b4b4b4;
+        font-size: var(--font-size-2);
+        text-align: center;
+        text-decoration: none;
+        border-radius: 10px;
+        transition: 0.5s;
+      }
+
+      .trailer-youtube-button:hover {
+        background: linear-gradient(45deg, #f2cc0d, #f2800d);
+        color: #111111;
+        transition: 0.5s;
+      }
+
+      .trailer-youtube-button img {
+        width: 5%;
+        margin-right: 2%;
+      }
+
+      .trailer-video video {
+        position: relative;
         z-index: -10;
+        width: 100%;
         mask-image: linear-gradient(
           to right,
           rgba(0, 0, 0, 1) 80%,
@@ -178,9 +209,7 @@
       /* ------------------------------ gallery ------------------------------ */
 
       #gallery {
-        background: url(/gamedev/invasion-z/showcase/bg-2-mask.jpg) no-repeat;
-        background-size: cover;
-        background-position: center top;
+        background: url(/assets/backgrounds/leather-bg-75.jpg);
       }
 
       .screenshots {
@@ -445,14 +474,25 @@
     </section>
 
     <!-- ------------------------------ trailer ------------------------------ -->
-    <!-- <script src="/js/separators.js"></script>
+    <script src="/js/separators.js"></script>
     <section id="trailer">
-      <video
-        src="/gamedev/invasion-z/showcase/trailer.webm"
-        loop
-        autoplay
-        muted
-      ></video>
+      <div class="trailer-video">
+        <a
+          class="trailer-youtube-button"
+          href="/gamedev/invasion-z/showcase/trailer.mp4"
+          target="_blank"
+          ><img
+            src="/gamedev/invasion-z/showcase/yt-icon-white.svg"
+            alt=""
+          />Voir la bande-annonce</a
+        >
+        <video
+          src="/gamedev/invasion-z/showcase/trailer.mp4"
+          loop
+          autoplay
+          muted
+        ></video>
+      </div>
       <div class="trailer-about">
         <h3>À propos du jeu</h3>
         <p>
@@ -465,7 +505,7 @@
           de vos amis.
         </p>
       </div>
-    </section> -->
+    </section>
 
     <!-- ------------------------------ gallery ------------------------------ -->
     <!-- <script src="/js/separators.js"></script>
