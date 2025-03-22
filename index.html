@@ -69,9 +69,21 @@
         gap: 2%;
       }
 
-      .videos-grid iframe {
+      .videos-grid a {
         width: 100%;
         height: 25vh;
+        transition: 1s;
+      }
+
+      .videos-grid a:hover {
+        transform: scale(1.1);
+        transition: 1s;
+      }
+
+      .videos-grid img {
+        width: 100%;
+        border: 2px solid var(--color-3);
+        border-radius: 10px;
       }
 
       /* ------------------------------ nous-rejoindre ------------------------------ */
@@ -285,7 +297,7 @@
       }
 
       @media (max-width: 480px) {
-        .videos-grid iframe {
+        .videos-grid a {
           height: 12.5vh;
         }
       }
@@ -677,34 +689,26 @@
     <section id="nos-videos">
       <h2>Nos dernières vidéos</h2>
       <div class="videos-grid">
-        <iframe
-          src="https://www.youtube.com/embed/Nh_k8HgmwaE"
-          width=""
-          height=""
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          src="https://www.youtube.com/embed/5l2BOSwWosI"
-          width=""
-          height=""
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          src="https://www.youtube.com/embed/QG_-OkAn0U4"
-          width=""
-          height=""
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          src="https://www.youtube.com/embed/iEX5fmD2mOE"
-          width=""
-          height=""
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
+        <a target="_blank" href="https://youtu.be/Nh_k8HgmwaE"
+          ><img
+            src="/assets/thumbnails/yt-video-20240901-thumbnail.png"
+            alt="Une de nos dernières vidéos YouTube"
+        /></a>
+        <a target="_blank" href="https://youtu.be/5l2BOSwWosI"
+          ><img
+            src="/assets/thumbnails/yt-video-20240501-thumbnail.png"
+            alt="Une de nos dernières vidéos YouTube"
+        /></a>
+        <a target="_blank" href="https://youtu.be/QG_-OkAn0U4"
+          ><img
+            src="/assets/thumbnails/yt-video-20240101-thumbnail.png"
+            alt="Une de nos dernières vidéos YouTube"
+        /></a>
+        <a target="_blank" href="https://youtu.be/iEX5fmD2mOE"
+          ><img
+            src="/assets/thumbnails/yt-video-20230901-thumbnail.png"
+            alt="Une de nos dernières vidéos YouTube"
+        /></a>
       </div>
     </section>
 
