@@ -10,6 +10,7 @@ document.write(`
             <a href="/index.html#nous-rejoindre">Nous rejoindre</a>
             <a href="/index.html#mdstock">MDStock</a>
             <a href="/index.html#myths-and-legends" class="nav-link-myths-and-legends">Myths and Legends</a>
+            <a href="/invasion-z.html" class="nav-link-invasion-z">Invasion Z</a>
         </div>
     </nav>
     

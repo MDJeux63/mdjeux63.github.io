@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invasion Z | Free demo available!</title>
+    <link
+      rel="shortcut icon"
+      href="/gamedev/invasion-z-final/icon-256.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+
+    <style>
+      /* ------------------------------ fonts ------------------------------ */
+
+      @import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap");
+
+      /* ------------------------------ global ------------------------------ */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      section {
+        scroll-margin: 0;
+        padding: 5% 10%;
+        color: #b4b4b4;
+        font-family: var(--font-4), sans-serif;
+      }
+
+      h2,
+      h3 {
+        margin-bottom: 3%;
+        text-align: center;
+        font-family: inherit;
+        text-transform: uppercase;
+        text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+        transition: 2s;
+      }
+
+      h2 {
+        color: #f2cc0d;
+        font-size: var(--font-size-6);
+      }
+
+      h3 {
+        color: #d92626;
+        font-size: var(--font-size-5);
+      }
+
+      h2:hover {
+        color: #d92626;
+        transition: 2s;
+      }
+
+      h3:hover {
+        color: #f2cc0d;
+        transition: 2s;
+      }
+
+      /* ------------------------------ intro ------------------------------ */
+
+      #intro {
+        background: url(/gamedev/invasion-z/showcase/bg-2-mask.jpg) no-repeat;
+        background-size: cover;
+        background-position: center top;
+      }
+
+      .game-logo {
+        width: 100%;
+        padding: 0 30% 3% 30%;
+        transition: 0.5s;
+      }
+
+      .game-logo:hover {
+        transform: scale(1.2);
+        transition: 0.5s;
+      }
+
+      .subtitle {
+        font-size: var(--font-size-6);
+      }
+
+      .description {
+        text-align: center;
+        font-size: var(--font-size-4);
+      }
+
+      .game-download {
+        margin-top: 2%;
+        text-align: center;
+        width: 100%;
+        background: linear-gradient(45deg, #f2cc0d, #f2800d);
+        color: #111111;
+        border: none;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+        font-size: var(--font-size-5);
+        text-decoration: none;
+        border-radius: 10px;
+        transition: 0.5s;
+      }
+
+      .game-download:hover {
+        background: linear-gradient(45deg, #380f8a, #8a0f8a);
+        color: #b4b4b4;
+        transition: 0.5s;
+      }
+
+      .game-download img {
+        width: 100%;
+      }
+
+      .game-download a {
+        padding: 1% 5%;
+        display: grid;
+        grid-template-columns: repeat(3, 10% 70% 20%);
+        align-items: center;
+        color: inherit;
+        font-family: var(--font-4);
+        text-decoration: none;
+      }
+
+      .game-download .mini {
+        font-size: var(--font-size-2);
+      }
+
+      .game-join-betatest {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 8vh;
+        margin-top: 3%;
+        padding: 1%;
+        background: linear-gradient(45deg, #f2cc0d, #f2800d);
+        color: #111111;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+        font-size: var(--font-size-4);
+        text-align: center;
+        text-decoration: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+
+      .game-join-betatest:hover {
+        background: linear-gradient(45deg, #380f8a, #8a0f8a);
+        color: #b4b4b4;
+        transition: 0.5s;
+      }
+
+      /* ------------------------------ trailer ------------------------------ */
+
+      #trailer {
+        padding: 0;
+        display: grid;
+        grid-template-columns: 5fr 3fr;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .trailer-video {
+        position: relative;
+      }
+
+      .trailer-youtube-button {
+        position: absolute;
+        top: 85%;
+        margin-left: 3%;
+        padding: 1%;
+        background: linear-gradient(45deg, #380f8a, #8a0f8a);
+        box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+        color: #b4b4b4;
+        font-size: var(--font-size-2);
+        text-align: center;
+        text-decoration: none;
+        border-radius: 10px;
+        transition: 0.5s;
+      }
+
+      .trailer-youtube-button:hover {
+        background: linear-gradient(45deg, #f2cc0d, #f2800d);
+        color: #111111;
+        transition: 0.5s;
+      }
+
+      .trailer-youtube-button img {
+        width: 5%;
+        margin-right: 2%;
+      }
+
+      .trailer-video video {
+        position: relative;
+        z-index: -10;
+        width: 100%;
+        mask-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 1) 80%,
+          rgba(0, 0, 0, 0) 100%
+        );
+      }
+
+      .trailer-about {
+        margin: 10%;
+        font-size: var(--font-size-3);
+        line-height: 1.5;
+      }
+
+      .trailer-about h3 {
+        margin-bottom: 7%;
+      }
+
+      .trailer-about .highlight {
+        color: #f2cc0d;
+        text-transform: uppercase;
+      }
+
+      /* ------------------------------ betatest ------------------------------ */
+
+      #betatest p {
+        margin: 3%;
+        font-size: var(--font-size-3);
+        line-height: 1.5;
+        text-align: justify;
+      }
+
+      .form-button {
+        background: #8a0f8a;
+        transition: 0.5s;
+      }
+
+      .form-button:hover {
+        background: #d92626;
+        color: #b4b4b4;
+        transition: 0.5s;
+      }
+
+      /* ------------------------------ gallery ------------------------------ */
+
+      #gallery {
+        background: url(/assets/backgrounds/leather-bg-75.jpg);
+      }
+
+      .screenshots {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1%;
+      }
+
+      .screenshots img {
+        width: 100%;
+        border: 2px solid #8a0f8a;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+      }
+
+      .screenshots img:hover {
+        transform: scale(1.5);
+        transition: 0.5s;
+      }
+
+      /* ------------------------------ outro ------------------------------ */
+
+      #outro {
+        background: url(/gamedev/invasion-z/showcase/bg-1.png) no-repeat;
+        background-size: cover;
+        background-position: center top;
+      }
+
+      .config {
+        margin: 0 15% 5% 15%;
+        padding: 2%;
+        background: rgba(0, 0, 0, 0.7);
+        border: 2px solid #b4b4b4;
+        border-radius: 10px;
+      }
+
+      .config h3 {
+        margin-bottom: 3%;
+      }
+
+      .config p {
+        margin-bottom: 1%;
+        font-size: var(--font-size-3);
+      }
+
+      .config img {
+        margin: 1% 0 2% 0;
+        width: 30%;
+      }
+
+      .end-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .end-links a {
+        margin: 0 5%;
+        padding: 2%;
+        text-align: center;
+        color: inherit;
+        font-size: var(--font-size-2);
+        background: rgba(0, 0, 0, 0.7);
+        border: 2px solid #b4b4b4;
+        border-radius: 10px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+
+      .end-links a:hover {
+        background: #380f8a;
+        color: #b4b4b4;
+        transition: 0.5s;
+      }
+
+      /* ------------------------------ popups ------------------------------ */
+
+      dialog {
+        position: absolute;
+        font-family: var(--font-4), sans-serif;
+        padding: 5%;
+        top: 50%;
+        left: 50%;
+        font-size: var(--font-size-3);
+        background: url(/assets/backgrounds/leather-bg-75.jpg);
+        color: #b4b4b4;
+        transform: translate(-50%, -50%);
+        border: 5px solid #380f8a;
+        border-radius: 10px;
+        box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.7);
+      }
+
+      dialog ol li {
+        margin-bottom: 5%;
+      }
+
+      .popup-btn {
+        display: inline-block;
+        margin-bottom: 5%;
+        padding: 3% 5%;
+        text-align: center;
+        background: linear-gradient(45deg, #f2cc0d, #f2800d);
+        color: #111111;
+        font-family: inherit;
+        font-size: var(--font-size-5);
+        border: none;
+        border-radius: 10px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 1s;
+      }
+
+      .popup-btn:hover {
+        background: linear-gradient(45deg, #380f8a, #8a0f8a);
+        color: #b4b4b4;
+        transition: 1s;
+      }
+
+      .popup-btn:last-child {
+        margin-bottom: 0;
+        font-size: var(--font-size-3);
+      }
+
+      .popup_mail-email {
+        margin: 5% 10%;
+        font-size: var(--font-size-5);
+        text-align: center;
+      }
+
+      /* ------------------------------ responsive ------------------------------ */
+
+      @media (max-width: 1440px) {
+        .game-logo {
+          padding: 0 15% 3% 15%;
+        }
+
+        dialog {
+          width: 75%;
+        }
+      }
+
+      @media (max-width: 1280px) {
+        #trailer {
+          display: initial;
+        }
+
+        #trailer video {
+          mask-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 1) 80%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+      }
+
+      @media (max-width: 960px) {
+        .game-logo {
+          padding: 0 5% 3% 5%;
+        }
+
+        .screenshots {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .config {
+          margin: 5% 0;
+        }
+
+        .end-links {
+          grid-template-columns: repeat(1, 1fr);
+        }
+
+        .end-links a {
+          margin: 2% 0;
+        }
+
+        dialog {
+          width: 100%;
+        }
+      }
+
+      @media (min-width: 720px) {
+        .form-button {
+          display: block;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .screenshots {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script src="/js/scroll-anchor.js"></script>
+
+    <!-- ------------------------------ nav ------------------------------ -->
+    <script src="/js/nav.js"></script>
+
+    <!-- ------------------------------ popup_betatest ------------------------------ -->
+    <dialog id="popup_betatest">
+      <h3>Installation instructions</h3>
+      <ol>
+        <li>
+          Click on the button below to register for the beta test program.
+        </li>
+        <a target="_blank" href="" class="popup-btn"
+          >Sign up for the beta test program
+        </a>
+        <li>
+          On the registration page, click on the "Become a tester" button.
+        </li>
+        <li>Click on the "Download it on Google Play" installation link.</li>
+        <li>You can now install the game on your device!</li>
+      </ol>
+      <button class="popup-btn" id="closePopup_betatest">Close</button>
+    </dialog>
+
+    <!-- ------------------------------ popup_mail ------------------------------ -->
+    <dialog id="popup_mail">
+      <h3>Contact the development team</h3>
+      <p>Feedback by e-mail:</p>
+      <p class="popup_mail-email">autoedit.mdjeux63@gmail.com</p>
+      <button class="popup-btn" id="closePopup_mail">Close</button>
+    </dialog>
+
+    <!-- ------------------------------ intro ------------------------------ -->
+    <section id="intro">
+      <img
+        class="game-logo"
+        src="/gamedev/invasion-z/showcase/game-logo.png"
+        alt="Logo"
+      />
+      <h2 class="subtitle">Free demo available!</h2>
+
+      <p class="description">
+        Invasion Z is a minimalist, addictive arcade game. Can you defeat all
+        the zombies? Can you beat the record for most enemies?
+      </p>
+
+      <button class="game-download">
+        <a href="https://voodoox.itch.io/invasionz" target="_blank">
+          <img src="/gamedev/invasion-z-final/icon-256.png" alt="Icon" />
+          <p>
+            Play now on itch.io<br /><span class="mini"
+              >or download for Windows & Android</span
+            >
+          </p>
+          <img
+            src="/gamedev/invasion-z/showcase/available-on-itchio-logo.svg"
+            alt="Available on itch.io"
+          />
+        </a>
+      </button>
+
+      <a href="#betatest" class="game-join-betatest">
+        <p>
+          Would you like to be one of the beta testers who will enable to
+          release its final version?
+        </p>
+      </a>
+    </section>
+
+    <!-- ------------------------------ trailer ------------------------------ -->
+    <script src="/js/separators.js"></script>
+    <section id="trailer">
+      <div class="trailer-video">
+        <a
+          class="trailer-youtube-button"
+          href="https://youtu.be/-B0mJMbLh1E"
+          target="_blank"
+          ><img
+            src="/gamedev/invasion-z/showcase/yt-icon-white.svg"
+            alt=""
+          />Watch the trailer</a
+        >
+        <video
+          src="/gamedev/invasion-z/showcase/trailer.mp4"
+          loop
+          autoplay
+          muted
+        ></video>
+      </div>
+      <div class="trailer-about">
+        <h3>About the game</h3>
+        <p>
+          In <span class="highlight">Invasion Z</span>, you need to slaughter as
+          many zombies as you can get your hands on. But remember to collect
+          ammunition too, otherwise you'll lose out to the horde. Eliminate as
+          many opponents as possible to reach new ranks. As in all arcade games,
+          your score appears on the screen: try to beat your record or even that
+          of your friends.
+        </p>
+      </div>
+    </section>
+
+    <!-- ------------------------------ betatest ------------------------------ -->
+    <script src="/js/separators.js"></script>
+    <section id="betatest">
+      <h2>We need your help! Join the beta test!</h2>
+      <p>
+        Before we can publish Invasion Z in its final version on Google Play, we
+        need to organize a beta test, which you can sign up for by completing
+        the form below. You'll receive access to the full version of the game,
+        and can give us your feedback on.
+      </p>
+      <a
+        class="primary-button form-button"
+        href="https://docs.google.com/forms/d/e/1FAIpQLScaw1t71XyYLGQMlQ48ioZOTvWtmgBx9DiTCxbyBoWp83396g/viewform"
+        target="_blank"
+        >Click here to open the Google Forms page</a
+      >
+    </section>
+
+    <!-- ------------------------------ gallery ------------------------------ -->
+    <script src="/js/separators.js"></script>
+    <section id="gallery">
+      <h2>Screenshots</h2>
+      <div class="screenshots">
+        <a
+          target="_blank"
+          href="/gamedev/invasion-z/showcase/screenshots/screenshot_1.png"
+        >
+          <img
+            src="/gamedev/invasion-z/showcase/screenshots/screenshot_1.png"
+            alt="Screenshot 1"
+          />
+        </a>
+        <a
+          target="_blank"
+          href="/gamedev/invasion-z/showcase/screenshots/screenshot_2.png"
+        >
+          <img
+            src="/gamedev/invasion-z/showcase/screenshots/screenshot_2.png"
+            alt="Screenshot 2"
+          />
+        </a>
+        <a
+          target="_blank"
+          href="/gamedev/invasion-z/showcase/screenshots/screenshot_3.png"
+        >
+          <img
+            src="/gamedev/invasion-z/showcase/screenshots/screenshot_3.png"
+            alt="Screenshot 3"
+          />
+        </a>
+        <a
+          target="_blank"
+          href="/gamedev/invasion-z/showcase/screenshots/screenshot_4.png"
+        >
+          <img
+            src="/gamedev/invasion-z/showcase/screenshots/screenshot_4.png"
+            alt="Screenshot 4"
+          />
+        </a>
+        <a
+          target="_blank"
+          href="/gamedev/invasion-z/showcase/screenshots/screenshot_5.png"
+        >
+          <img
+            src="/gamedev/invasion-z/showcase/screenshots/screenshot_5.png"
+            alt="Screenshot 5"
+          />
+        </a>
+        <a
+          target="_blank"
+          href="/gamedev/invasion-z/showcase/screenshots/screenshot_6.png"
+        >
+          <img
+            src="/gamedev/invasion-z/showcase/screenshots/screenshot_6.png"
+            alt="Screenshot 6"
+          />
+        </a>
+        <a
+          target="_blank"
+          href="/gamedev/invasion-z/showcase/screenshots/screenshot_7.png"
+        >
+          <img
+            src="/gamedev/invasion-z/showcase/screenshots/screenshot_7.png"
+            alt="Screenshot 7"
+          />
+        </a>
+        <a
+          target="_blank"
+          href="/gamedev/invasion-z/showcase/screenshots/screenshot_8.png"
+        >
+          <img
+            src="/gamedev/invasion-z/showcase/screenshots/screenshot_8.png"
+            alt="Screenshot 8"
+          />
+        </a>
+      </div>
+    </section>
+
+    <!-- ------------------------------ outro ------------------------------ -->
+    <script src="/js/separators.js"></script>
+    <section id="outro">
+      <div class="config">
+        <h3>System requirements (Android version)</h3>
+        <p>
+          Operating system:<br />Android 6.0 Marshmallow (minimum) &ndash;
+          Android 15 (recommended)
+        </p>
+        <p>100&nbsp;MB free disk space</p>
+        <p>Requires Internet connection to play</p>
+      </div>
+
+      <div class="end-links">
+        <a href="/gamedev/invasion-z/legal.html">Consult our privacy policy</a>
+        <a id="openPopup_mail">
+          Contact the development team (e-mail feedback)
+        </a>
+      </div>
+    </section>
+
+    <!-- ------------------------------ footer ------------------------------ -->
+    <script src="/js/separators.js"></script>
+    <script src="/js/footer.js"></script>
+
+    <!-- ------------------------------ script-popup ------------------------------ -->
+    <script>
+      // const popup_betatest = document.getElementById("popup_betatest");
+      // const openButton_betatest = document.getElementById("openPopup_betatest");
+      // const closeButton_betatest = document.getElementById(
+      //   "closePopup_betatest"
+      // );
+
+      // openButton_betatest.addEventListener("click", () => {
+      //   popup_betatest.showModal();
+      // });
+
+      // closeButton_betatest.addEventListener("click", () => {
+      //   popup_betatest.close();
+      // });
+
+      const popup_mail = document.getElementById("popup_mail");
+      const openButton_mail = document.getElementById("openPopup_mail");
+      const closeButton_mail = document.getElementById("closePopup_mail");
+
+      openButton_mail.addEventListener("click", () => {
+        popup_mail.showModal();
+      });
+
+      closeButton_mail.addEventListener("click", () => {
+        popup_mail.close();
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          document.querySelectorAll("dialog").forEach((d) => d.close());
+        }
+      });
+    </script>
+  </body>
+</html>

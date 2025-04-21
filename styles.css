@@ -1,10 +1,9 @@
 /* ------------------------------ fonts ------------------------------ */
 
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
-
 @import url("https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap");
-
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap");
 
 @font-face {
   font-family: "Lucida Blackletter";
@@ -17,7 +16,8 @@
   --font-1: "Noto Serif";
   --font-2: "Eczar";
   --font-3: "Cinzel";
-  --font-4: "Lucida Blackletter";
+  --font-4: "Rowdies";
+  --font-5: "Lucida Blackletter";
 
   --color-1: #111111;
   --color-2: #0080ff;
@@ -165,7 +165,7 @@ nav {
 .nav-title {
   margin-right: 10%;
   color: var(--color-9);
-  font-family: var(--font-4);
+  font-family: var(--font-5);
   font-size: var(--font-size-5);
   font-weight: initial;
   text-decoration: inherit;
@@ -194,6 +194,11 @@ nav {
 
 .nav-link-myths-and-legends {
   font-family: var(--font-3);
+}
+
+.nav-link-invasion-z {
+  font-family: var(--font-4);
+  text-transform: uppercase;
 }
 
 /* ------------------------------ header ------------------------------ */
